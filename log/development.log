@@ -1,0 +1,1129 @@
+** acts_as_taggable_on: initialized properly.
+** acts_as_taggable_on: initialized properly.
+** acts_as_taggable_on: initialized properly.
+** acts_as_taggable_on: initialized properly.
+** acts_as_taggable_on: initialized properly.
+** acts_as_taggable_on: initialized properly.
+** acts_as_taggable_on: initialized properly.
+** acts_as_taggable_on: initialized properly.
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Table 'config' not exists. Just the last effort to create the config table if doesn't exists
+  [4;35;1mSQL (0.4ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mCREATE TABLE "config" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "key" varchar(255) DEFAULT '' NOT NULL, "value" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (2.7ms)[0m   [0mCREATE UNIQUE INDEX "key" ON "config" ("key")[0m
+  [4;36;1mTog::Config Load (0.4ms)[0m   [0;1mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.site.name') LIMIT 1[0m
+  [4;35;1mSQL (0.9ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mTog::Config Load (0.1ms)[0m   [0;1mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.site.name') LIMIT 1[0m
+  [4;35;1mTog::Config Create (0.4ms)[0m   [0mINSERT INTO "config" ("created_at", "updated_at", "value", "key") VALUES('2010-01-14 14:29:09', '2010-01-14 14:29:09', 'toginstallation.com', 'plugins.tog_core.site.name')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.1ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.mail.system_from_address') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.1ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.mail.system_from_address') LIMIT 1[0m
+  [4;36;1mTog::Config Create (0.4ms)[0m   [0;1mINSERT INTO "config" ("created_at", "updated_at", "value", "key") VALUES('2010-01-14 14:29:09', '2010-01-14 14:29:09', 'Tog Admin <tog@linkingpaths.com>', 'plugins.tog_core.mail.system_from_address')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mTog::Config Load (0.1ms)[0m   [0;1mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.language.default') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mTog::Config Load (0.1ms)[0m   [0;1mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.language.default') LIMIT 1[0m
+  [4;35;1mTog::Config Create (0.3ms)[0m   [0mINSERT INTO "config" ("created_at", "updated_at", "value", "key") VALUES('2010-01-14 14:29:09', '2010-01-14 14:29:09', 'en', 'plugins.tog_core.language.default')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.1ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.mail.default_subject') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.1ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.mail.default_subject') LIMIT 1[0m
+  [4;36;1mTog::Config Create (0.3ms)[0m   [0;1mINSERT INTO "config" ("created_at", "updated_at", "value", "key") VALUES('2010-01-14 14:29:09', '2010-01-14 14:29:09', '[Tog Installation] ', 'plugins.tog_core.mail.default_subject')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mTog::Config Load (0.6ms)[0m   [0;1mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.host.port') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mTog::Config Load (0.1ms)[0m   [0;1mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.host.port') LIMIT 1[0m
+  [4;35;1mTog::Config Create (0.3ms)[0m   [0mINSERT INTO "config" ("created_at", "updated_at", "value", "key") VALUES('2010-01-14 14:29:09', '2010-01-14 14:29:09', '3000', 'plugins.tog_core.host.port')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.1ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.host.name') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.1ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.host.name') LIMIT 1[0m
+  [4;36;1mTog::Config Create (0.3ms)[0m   [0;1mINSERT INTO "config" ("created_at", "updated_at", "value", "key") VALUES('2010-01-14 14:29:09', '2010-01-14 14:29:09', '0.0.0.0', 'plugins.tog_core.host.name')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mTog::Config Load (0.1ms)[0m   [0;1mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.patch_field_error_proc') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mTog::Config Load (0.1ms)[0m   [0;1mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.patch_field_error_proc') LIMIT 1[0m
+  [4;35;1mTog::Config Create (0.4ms)[0m   [0mINSERT INTO "config" ("created_at", "updated_at", "value", "key") VALUES('2010-01-14 14:29:09', '2010-01-14 14:29:09', 'true', 'plugins.tog_core.patch_field_error_proc')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.2ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.pagination_size') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.1ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.pagination_size') LIMIT 1[0m
+  [4;36;1mTog::Config Create (0.3ms)[0m   [0;1mINSERT INTO "config" ("created_at", "updated_at", "value", "key") VALUES('2010-01-14 14:29:09', '2010-01-14 14:29:09', '50', 'plugins.tog_core.pagination_size')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mTog::Config Load (0.1ms)[0m   [0;1mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.spam.url') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mTog::Config Load (0.2ms)[0m   [0;1mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.spam.url') LIMIT 1[0m
+  [4;35;1mTog::Config Create (0.4ms)[0m   [0mINSERT INTO "config" ("created_at", "updated_at", "value", "key") VALUES('2010-01-14 14:29:09', '2010-01-14 14:29:09', '', 'plugins.tog_core.spam.url')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.1ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.spam.key') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.1ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.spam.key') LIMIT 1[0m
+  [4;36;1mTog::Config Create (0.4ms)[0m   [0;1mINSERT INTO "config" ("created_at", "updated_at", "value", "key") VALUES('2010-01-14 14:29:09', '2010-01-14 14:29:09', '', 'plugins.tog_core.spam.key')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mTog::Config Load (0.2ms)[0m   [0;1mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.spam.engine') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mTog::Config Load (0.1ms)[0m   [0;1mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.spam.engine') LIMIT 1[0m
+  [4;35;1mTog::Config Create (0.7ms)[0m   [0mINSERT INTO "config" ("created_at", "updated_at", "value", "key") VALUES('2010-01-14 14:29:09', '2010-01-14 14:29:09', '', 'plugins.tog_core.spam.engine')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.1ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.sanitized.comments.allowed_tags') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.1ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.sanitized.comments.allowed_tags') LIMIT 1[0m
+  [4;36;1mTog::Config Create (0.4ms)[0m   [0;1mINSERT INTO "config" ("created_at", "updated_at", "value", "key") VALUES('2010-01-14 14:29:09', '2010-01-14 14:29:09', 'del dd h3 address big sub tt a ul h4 cite dfn h5 small kbd code b ins img h6 sup pre strong blockquote acronym dt br p div samp li ol var em h1 i abbr h2 span hr', 'plugins.tog_core.sanitized.comments.allowed_tags')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mTog::Config Load (0.1ms)[0m   [0;1mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.sanitized.allowed_attributes') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mTog::Config Load (0.1ms)[0m   [0;1mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.sanitized.allowed_attributes') LIMIT 1[0m
+  [4;35;1mTog::Config Create (0.6ms)[0m   [0mINSERT INTO "config" ("created_at", "updated_at", "value", "key") VALUES('2010-01-14 14:29:09', '2010-01-14 14:29:09', 'name href cite class title src xml:lang height datetime alt abbr width name width height value src href', 'plugins.tog_core.sanitized.allowed_attributes')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.4ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.sanitized.allowed_tags') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.2ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.sanitized.allowed_tags') LIMIT 1[0m
+  [4;36;1mTog::Config Create (1.4ms)[0m   [0;1mINSERT INTO "config" ("created_at", "updated_at", "value", "key") VALUES('2010-01-14 14:29:09', '2010-01-14 14:29:09', 'del dd h3 address big sub tt a ul h4 cite dfn h5 small kbd code b ins img h6 sup pre strong blockquote acronym dt br p div samp li ol var em h1 i abbr h2 span hr object param embed', 'plugins.tog_core.sanitized.allowed_tags')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mTog::Config Load (0.1ms)[0m   [0;1mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.sanitized.comments.allowed_attributes') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mTog::Config Load (0.1ms)[0m   [0;1mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.sanitized.comments.allowed_attributes') LIMIT 1[0m
+  [4;35;1mTog::Config Create (0.5ms)[0m   [0mINSERT INTO "config" ("created_at", "updated_at", "value", "key") VALUES('2010-01-14 14:29:09', '2010-01-14 14:29:09', 'name href cite class title src xml:lang height datetime alt abbr width', 'plugins.tog_core.sanitized.comments.allowed_attributes')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.2ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.storage.filesystem.path') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.1ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.storage.filesystem.path') LIMIT 1[0m
+  [4;36;1mTog::Config Create (0.4ms)[0m   [0;1mINSERT INTO "config" ("created_at", "updated_at", "value", "key") VALUES('2010-01-14 14:29:09', '2010-01-14 14:29:09', ':rails_root/public/system/:class/:attachment/:id/:style_:basename.:extension', 'plugins.tog_core.storage.filesystem.path')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mTog::Config Load (0.4ms)[0m   [0;1mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.storage') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mTog::Config Load (0.1ms)[0m   [0;1mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.storage') LIMIT 1[0m
+  [4;35;1mTog::Config Create (0.4ms)[0m   [0mINSERT INTO "config" ("created_at", "updated_at", "value", "key") VALUES('2010-01-14 14:29:09', '2010-01-14 14:29:09', 'filesystem', 'plugins.tog_core.storage')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.2ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.patch_field_error_proc') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.3ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.host.name') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.2ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_mail.messages.default_folders') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.1ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_mail.messages.default_folders') LIMIT 1[0m
+  [4;36;1mTog::Config Create (0.4ms)[0m   [0;1mINSERT INTO "config" ("created_at", "updated_at", "value", "key") VALUES('2010-01-14 14:29:09', '2010-01-14 14:29:09', 'Inbox Outbox', 'plugins.tog_mail.messages.default_folders')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mTog::Config Load (0.2ms)[0m   [0;1mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_mail.messages_list.size') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mTog::Config Load (0.2ms)[0m   [0;1mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_mail.messages_list.size') LIMIT 1[0m
+  [4;35;1mTog::Config Create (0.4ms)[0m   [0mINSERT INTO "config" ("created_at", "updated_at", "value", "key") VALUES('2010-01-14 14:29:09', '2010-01-14 14:29:09', '10', 'plugins.tog_mail.messages_list.size')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.1ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_social.group.image.versions.small') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.1ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_social.group.image.versions.small') LIMIT 1[0m
+  [4;36;1mTog::Config Create (0.4ms)[0m   [0;1mINSERT INTO "config" ("created_at", "updated_at", "value", "key") VALUES('2010-01-14 14:29:09', '2010-01-14 14:29:09', '25x25#', 'plugins.tog_social.group.image.versions.small')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mTog::Config Load (0.1ms)[0m   [0;1mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_social.group.image.versions.big') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mTog::Config Load (0.1ms)[0m   [0;1mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_social.group.image.versions.big') LIMIT 1[0m
+  [4;35;1mTog::Config Create (0.3ms)[0m   [0mINSERT INTO "config" ("created_at", "updated_at", "value", "key") VALUES('2010-01-14 14:29:09', '2010-01-14 14:29:09', '128x128#', 'plugins.tog_social.group.image.versions.big')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.1ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_social.group.image.storage') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.1ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_social.group.image.storage') LIMIT 1[0m
+  [4;36;1mTog::Config Create (0.5ms)[0m   [0;1mINSERT INTO "config" ("created_at", "updated_at", "value", "key") VALUES('2010-01-14 14:29:09', '2010-01-14 14:29:09', 'file_system', 'plugins.tog_social.group.image.storage')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mTog::Config Load (0.1ms)[0m   [0;1mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_social.group.image.versions.medium') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mTog::Config Load (0.1ms)[0m   [0;1mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_social.group.image.versions.medium') LIMIT 1[0m
+  [4;35;1mTog::Config Create (0.4ms)[0m   [0mINSERT INTO "config" ("created_at", "updated_at", "value", "key") VALUES('2010-01-14 14:29:09', '2010-01-14 14:29:09', '72x72#', 'plugins.tog_social.group.image.versions.medium')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.2ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_social.group.image.default') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.1ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_social.group.image.default') LIMIT 1[0m
+  [4;36;1mTog::Config Create (0.4ms)[0m   [0;1mINSERT INTO "config" ("created_at", "updated_at", "value", "key") VALUES('2010-01-14 14:29:09', '2010-01-14 14:29:09', 'default_group.png', 'plugins.tog_social.group.image.default')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mTog::Config Load (0.2ms)[0m   [0;1mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_social.group.image.versions.tiny') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mTog::Config Load (0.1ms)[0m   [0;1mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_social.group.image.versions.tiny') LIMIT 1[0m
+  [4;35;1mTog::Config Create (0.3ms)[0m   [0mINSERT INTO "config" ("created_at", "updated_at", "value", "key") VALUES('2010-01-14 14:29:09', '2010-01-14 14:29:09', '12x12#', 'plugins.tog_social.group.image.versions.tiny')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.1ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_social.group.moderation.creation') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.1ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_social.group.moderation.creation') LIMIT 1[0m
+  [4;36;1mTog::Config Create (0.3ms)[0m   [0;1mINSERT INTO "config" ("created_at", "updated_at", "value", "key") VALUES('2010-01-14 14:29:09', '2010-01-14 14:29:09', 'false', 'plugins.tog_social.group.moderation.creation')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mTog::Config Load (0.2ms)[0m   [0;1mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_social.profile.list.page.size') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mTog::Config Load (0.1ms)[0m   [0;1mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_social.profile.list.page.size') LIMIT 1[0m
+  [4;35;1mTog::Config Create (0.4ms)[0m   [0mINSERT INTO "config" ("created_at", "updated_at", "value", "key") VALUES('2010-01-14 14:29:09', '2010-01-14 14:29:09', '10', 'plugins.tog_social.profile.list.page.size')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.1ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_social.profile.image.versions.small') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.2ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_social.profile.image.versions.small') LIMIT 1[0m
+  [4;36;1mTog::Config Create (0.4ms)[0m   [0;1mINSERT INTO "config" ("created_at", "updated_at", "value", "key") VALUES('2010-01-14 14:29:09', '2010-01-14 14:29:09', '50x50#', 'plugins.tog_social.profile.image.versions.small')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mTog::Config Load (0.2ms)[0m   [0;1mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_social.profile.image.versions.tiny') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mTog::Config Load (0.1ms)[0m   [0;1mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_social.profile.image.versions.tiny') LIMIT 1[0m
+  [4;35;1mTog::Config Create (0.4ms)[0m   [0mINSERT INTO "config" ("created_at", "updated_at", "value", "key") VALUES('2010-01-14 14:29:10', '2010-01-14 14:29:10', '25x25#', 'plugins.tog_social.profile.image.versions.tiny')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.1ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_social.profile.image.versions.medium') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.1ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_social.profile.image.versions.medium') LIMIT 1[0m
+  [4;36;1mTog::Config Create (0.4ms)[0m   [0;1mINSERT INTO "config" ("created_at", "updated_at", "value", "key") VALUES('2010-01-14 14:29:10', '2010-01-14 14:29:10', '100x100#', 'plugins.tog_social.profile.image.versions.medium')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mTog::Config Load (0.1ms)[0m   [0;1mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_social.profile.image.versions.big') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mTog::Config Load (0.1ms)[0m   [0;1mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_social.profile.image.versions.big') LIMIT 1[0m
+  [4;35;1mTog::Config Create (0.4ms)[0m   [0mINSERT INTO "config" ("created_at", "updated_at", "value", "key") VALUES('2010-01-14 14:29:10', '2010-01-14 14:29:10', '150x150#', 'plugins.tog_social.profile.image.versions.big')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.1ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_social.profile.image.default') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.1ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_social.profile.image.default') LIMIT 1[0m
+  [4;36;1mTog::Config Create (0.4ms)[0m   [0;1mINSERT INTO "config" ("created_at", "updated_at", "value", "key") VALUES('2010-01-14 14:29:10', '2010-01-14 14:29:10', 'default_profile.png', 'plugins.tog_social.profile.image.default')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mTog::Config Load (0.1ms)[0m   [0;1mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_user.captcha_enabled') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mTog::Config Load (0.1ms)[0m   [0;1mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_user.captcha_enabled') LIMIT 1[0m
+  [4;35;1mTog::Config Create (0.4ms)[0m   [0mINSERT INTO "config" ("created_at", "updated_at", "value", "key") VALUES('2010-01-14 14:29:10', '2010-01-14 14:29:10', 'false', 'plugins.tog_user.captcha_enabled')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.2ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_user.default_redirect_on_forgot') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.2ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_user.default_redirect_on_forgot') LIMIT 1[0m
+  [4;36;1mTog::Config Create (0.5ms)[0m   [0;1mINSERT INTO "config" ("created_at", "updated_at", "value", "key") VALUES('2010-01-14 14:29:10', '2010-01-14 14:29:10', '/', 'plugins.tog_user.default_redirect_on_forgot')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mTog::Config Load (0.1ms)[0m   [0;1mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_user.email_as_login') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mTog::Config Load (0.2ms)[0m   [0;1mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_user.email_as_login') LIMIT 1[0m
+  [4;35;1mTog::Config Create (0.4ms)[0m   [0mINSERT INTO "config" ("created_at", "updated_at", "value", "key") VALUES('2010-01-14 14:29:10', '2010-01-14 14:29:10', 'false', 'plugins.tog_user.email_as_login')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.1ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_user.default_redirect_on_reset') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (1.6ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_user.default_redirect_on_reset') LIMIT 1[0m
+  [4;36;1mTog::Config Create (0.4ms)[0m   [0;1mINSERT INTO "config" ("created_at", "updated_at", "value", "key") VALUES('2010-01-14 14:29:10', '2010-01-14 14:29:10', '/', 'plugins.tog_user.default_redirect_on_reset')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mTog::Config Load (0.1ms)[0m   [0;1mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_user.default_redirect_on_login') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mTog::Config Load (0.1ms)[0m   [0;1mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_user.default_redirect_on_login') LIMIT 1[0m
+  [4;35;1mTog::Config Create (0.4ms)[0m   [0mINSERT INTO "config" ("created_at", "updated_at", "value", "key") VALUES('2010-01-14 14:29:10', '2010-01-14 14:29:10', '/', 'plugins.tog_user.default_redirect_on_login')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.1ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_user.default_redirect_on_logout') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.1ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_user.default_redirect_on_logout') LIMIT 1[0m
+  [4;36;1mTog::Config Create (0.4ms)[0m   [0;1mINSERT INTO "config" ("created_at", "updated_at", "value", "key") VALUES('2010-01-14 14:29:10', '2010-01-14 14:29:10', '/', 'plugins.tog_user.default_redirect_on_logout')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mTog::Config Load (0.1ms)[0m   [0;1mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_user.default_redirect_on_signup') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mTog::Config Load (0.1ms)[0m   [0;1mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_user.default_redirect_on_signup') LIMIT 1[0m
+  [4;35;1mTog::Config Create (0.5ms)[0m   [0mINSERT INTO "config" ("created_at", "updated_at", "value", "key") VALUES('2010-01-14 14:29:10', '2010-01-14 14:29:10', '/', 'plugins.tog_user.default_redirect_on_signup')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.1ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_user.default_redirect_on_activation') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.1ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_user.default_redirect_on_activation') LIMIT 1[0m
+  [4;36;1mTog::Config Create (0.3ms)[0m   [0;1mINSERT INTO "config" ("created_at", "updated_at", "value", "key") VALUES('2010-01-14 14:29:10', '2010-01-14 14:29:10', '/', 'plugins.tog_user.default_redirect_on_activation')[0m
+Loading routes from /Volumes/Development/1.ux/hello_tog/vendor/plugins/tog_mail/config/desert_routes.rb.
+Loading routes from /Volumes/Development/1.ux/hello_tog/vendor/plugins/tog_social/config/desert_routes.rb.
+Loading routes from /Volumes/Development/1.ux/hello_tog/vendor/plugins/tog_core/config/desert_routes.rb.
+Loading routes from /Volumes/Development/1.ux/hello_tog/vendor/plugins/tog_user/config/desert_routes.rb.
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+** acts_as_taggable_on: initialized properly.
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.3ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.site.name') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.2ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.mail.system_from_address') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.2ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.language.default') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.2ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.mail.default_subject') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.2ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.host.port') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.2ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.host.name') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.2ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.patch_field_error_proc') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.2ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.pagination_size') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.2ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.spam.url') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.3ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.spam.key') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.2ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.spam.engine') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.2ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.sanitized.comments.allowed_tags') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.4ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.sanitized.allowed_attributes') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.2ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.sanitized.allowed_tags') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.2ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.sanitized.comments.allowed_attributes') LIMIT 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.3ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.storage.filesystem.path') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.2ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.storage') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.5ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.patch_field_error_proc') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.2ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.host.name') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.2ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_mail.messages.default_folders') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.3ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_mail.messages_list.size') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.3ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_social.group.image.versions.small') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.3ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_social.group.image.versions.big') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.2ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_social.group.image.storage') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.2ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_social.group.image.versions.medium') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.2ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_social.group.image.default') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.2ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_social.group.image.versions.tiny') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.2ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_social.group.moderation.creation') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.2ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_social.profile.list.page.size') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.5ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_social.profile.image.versions.small') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.5ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_social.profile.image.versions.tiny') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.2ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_social.profile.image.versions.medium') LIMIT 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.3ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_social.profile.image.versions.big') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.2ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_social.profile.image.default') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.2ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_user.default_redirect_on_activation') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.2ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_user.captcha_enabled') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.2ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_user.default_redirect_on_forgot') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.2ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_user.email_as_login') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.2ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_user.default_redirect_on_reset') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.2ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_user.default_redirect_on_login') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.2ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_user.default_redirect_on_logout') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.2ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_user.default_redirect_on_signup') LIMIT 1[0m
+Loading routes from /Volumes/Development/1.ux/hello_tog/vendor/plugins/tog_mail/config/desert_routes.rb.
+Loading routes from /Volumes/Development/1.ux/hello_tog/vendor/plugins/tog_social/config/desert_routes.rb.
+Loading routes from /Volumes/Development/1.ux/hello_tog/vendor/plugins/tog_core/config/desert_routes.rb.
+Loading routes from /Volumes/Development/1.ux/hello_tog/vendor/plugins/tog_user/config/desert_routes.rb.
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (99.9ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (8.3ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (201.3ms)[0m   [0;1mCREATE TABLE plugin_schema_migrations (plugin_name varchar(255), version varchar(255))[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSQLite3::SQLException: no such table: plugin_schema_info: SELECT plugin_name, version from plugin_schema_info[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateComments (20100114142839)
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(50) DEFAULT '', "comment" text DEFAULT '', "commentable_id" integer, "commentable_type" varchar(255), "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCREATE INDEX "index_comments_on_commentable_type" ON "comments" ("commentable_type")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCREATE INDEX "index_comments_on_commentable_id" ON "comments" ("commentable_id")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCREATE INDEX "index_comments_on_user_id" ON "comments" ("user_id")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100114142839')[0m
+Migrating to ActsAsRateableMigration (20100114142841)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "ratings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "rateable_id" integer, "rateable_type" varchar(255), "average_rating" float, "ratings_count" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCREATE INDEX "index_ratings_on_rateable_id_and_rateable_type" ON "ratings" ("rateable_id", "rateable_type")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE TABLE "user_ratings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "rating_id" integer, "user_id" integer, "score" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE INDEX "index_user_ratings_on_user_id_and_rating_id" ON "user_ratings" ("user_id", "rating_id")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100114142841')[0m
+Migrating to ActsAsAbusableMigration (20100114142844)
+  [4;35;1mSQL (0.7ms)[0m   [0mCREATE TABLE "abuses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "title" varchar(255), "referer" varchar(255), "description" varchar(255), "confirmed" boolean DEFAULT 'f', "resource_id" integer, "resource_type" varchar(255), "created_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100114142844')[0m
+Migrating to ActsAsTaggableOnMigration (20100114142846)
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255)) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE TABLE "taggings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "tag_id" integer, "taggable_id" integer, "tagger_id" integer, "tagger_type" varchar(255), "taggable_type" varchar(255), "context" varchar(255), "created_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE INDEX "index_taggings_on_tag_id" ON "taggings" ("tag_id")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE INDEX "index_taggings_on_taggable_id_and_taggable_type_and_context" ON "taggings" ("taggable_id", "taggable_type", "context")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100114142846')[0m
+Migrating to ActsAsScribeMigration (20100114142849)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCREATE TABLE "activities" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "action" varchar(255), "item_id" integer, "item_type" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE INDEX "index_activities_on_item_type_and_item_id" ON "activities" ("item_type", "item_id")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100114142849')[0m
+Migrating to CreateShares (20100114142852)
+  [4;35;1mSQL (2.9ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "shares" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "shareable_type" varchar(30), "shareable_id" integer, "shared_to_type" varchar(30), "shared_to_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100114142852')[0m
+Migrating to InstallTogPlugins20100114142911 (20100114142911)
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSQLite3::SQLException: no such table: plugin_schema_info: SELECT plugin_name, version from plugin_schema_info[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM plugin_schema_migrations WHERE plugin_name = 'tog_user' order by version desc[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSQLite3::SQLException: no such table: plugin_schema_info: SELECT plugin_name, version from plugin_schema_info[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM plugin_schema_migrations where plugin_name='tog_user'[0m
+Migrating to CreateUserTable (1)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM plugin_schema_migrations where plugin_name='tog_user'[0m
+  [4;35;1mSQL (0.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(255), "email" varchar(255), "crypted_password" varchar(40), "salt" varchar(40), "activation_code" varchar(40), "password_reset_code" varchar(255), "remember_token" varchar(255), "remember_token_expires_at" datetime, "activated_at" datetime, "deleted_at" datetime, "state" varchar(255) DEFAULT 'passive', "admin" boolean DEFAULT 'f', "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO plugin_schema_migrations (plugin_name, version) VALUES ('tog_user', '1')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSQLite3::SQLException: no such table: plugin_schema_info: SELECT plugin_name, version from plugin_schema_info[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM plugin_schema_migrations WHERE plugin_name = 'tog_core' order by version desc[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSQLite3::SQLException: no such table: plugin_schema_info: SELECT plugin_name, version from plugin_schema_info[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM plugin_schema_migrations where plugin_name='tog_core'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM plugin_schema_migrations where plugin_name='tog_core'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM plugin_schema_migrations where plugin_name='tog_core'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM plugin_schema_migrations where plugin_name='tog_core'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM plugin_schema_migrations where plugin_name='tog_core'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM plugin_schema_migrations where plugin_name='tog_core'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM plugin_schema_migrations where plugin_name='tog_core'[0m
+Migrating to CreateTogConfig (1)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM plugin_schema_migrations where plugin_name='tog_core'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO plugin_schema_migrations (plugin_name, version) VALUES ('tog_core', '1')[0m
+Migrating to PatchCommentsTable (2)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM plugin_schema_migrations where plugin_name='tog_core'[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mALTER TABLE "comments" ADD "commentable_type_tmp" varchar(255) DEFAULT '' NOT NULL[0m
+  [4;36;1mComment Update (0.1ms)[0m   [0;1mUPDATE "comments" SET commentable_type_tmp = commentable_type [0m
+  [4;35;1mSQL (68.0ms)[0m   [0mCREATE TEMPORARY TABLE "altered_comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(50) DEFAULT '', "comment" text DEFAULT '', "commentable_id" integer, "commentable_type" varchar(255), "user_id" integer, "created_at" datetime, "updated_at" datetime, "commentable_type_tmp" varchar(255) DEFAULT '' NOT NULL) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mPRAGMA index_list("comments")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_info('index_comments_on_user_id')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('index_comments_on_commentable_id')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_info('index_comments_on_commentable_type')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE INDEX "temp_index_altered_comments_on_user_id" ON "altered_comments" ("user_id")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCREATE INDEX "temp_index_altered_comments_on_commentable_id" ON "altered_comments" ("commentable_id")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCREATE INDEX "temp_index_altered_comments_on_commentable_type" ON "altered_comments" ("commentable_type")[0m
+  [4;35;1mSQL (115.9ms)[0m   [0mDROP TABLE "comments"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(50) DEFAULT '', "comment" text DEFAULT '', "commentable_id" integer, "user_id" integer, "created_at" datetime, "updated_at" datetime, "commentable_type_tmp" varchar(255) DEFAULT '' NOT NULL) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mPRAGMA index_list("altered_comments")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('temp_index_altered_comments_on_commentable_type')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_info('temp_index_altered_comments_on_commentable_id')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('temp_index_altered_comments_on_user_id')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE INDEX "index_comments_on_commentable_id" ON "comments" ("commentable_id")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE INDEX "index_comments_on_user_id" ON "comments" ("user_id")[0m
+  [4;35;1mSQL (98.9ms)[0m   [0mDROP TABLE "altered_comments"[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mALTER TABLE "comments" ADD "commentable_type" varchar(255) DEFAULT '' NOT NULL[0m
+  [4;35;1mComment Update (0.2ms)[0m   [0mUPDATE "comments" SET commentable_type = commentable_type_tmp [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(50) DEFAULT '', "comment" text DEFAULT '', "commentable_id" integer, "user_id" integer, "created_at" datetime, "updated_at" datetime, "commentable_type_tmp" varchar(255) DEFAULT '' NOT NULL, "commentable_type" varchar(255) DEFAULT '' NOT NULL) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("comments")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('index_comments_on_user_id')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_info('index_comments_on_commentable_id')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE INDEX "temp_index_altered_comments_on_user_id" ON "altered_comments" ("user_id")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCREATE INDEX "temp_index_altered_comments_on_commentable_id" ON "altered_comments" ("commentable_id")[0m
+  [4;36;1mSQL (110.9ms)[0m   [0;1mDROP TABLE "comments"[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(50) DEFAULT '', "comment" text DEFAULT '', "commentable_id" integer, "user_id" integer, "created_at" datetime, "updated_at" datetime, "commentable_type" varchar(255) DEFAULT '' NOT NULL) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("altered_comments")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_info('temp_index_altered_comments_on_commentable_id')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('temp_index_altered_comments_on_user_id')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE INDEX "index_comments_on_commentable_id" ON "comments" ("commentable_id")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCREATE INDEX "index_comments_on_user_id" ON "comments" ("user_id")[0m
+  [4;35;1mSQL (100.1ms)[0m   [0mDROP TABLE "altered_comments"[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO plugin_schema_migrations (plugin_name, version) VALUES ('tog_core', '2')[0m
+Migrating to AddCommentsModeration (3)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM plugin_schema_migrations where plugin_name='tog_core'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mALTER TABLE "comments" ADD "approved" boolean DEFAULT 'f'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO plugin_schema_migrations (plugin_name, version) VALUES ('tog_core', '3')[0m
+Migrating to AddAnonymousComments (4)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM plugin_schema_migrations where plugin_name='tog_core'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mALTER TABLE "comments" ADD "name" varchar(255)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mALTER TABLE "comments" ADD "email" varchar(255)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mALTER TABLE "comments" ADD "url" varchar(255)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO plugin_schema_migrations (plugin_name, version) VALUES ('tog_core', '4')[0m
+Migrating to AddSpamComments (5)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM plugin_schema_migrations where plugin_name='tog_core'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mALTER TABLE "comments" ADD "spam" boolean DEFAULT 'f'[0m
+  [4;35;1mComment Update (0.1ms)[0m   [0mUPDATE "comments" SET "spam" = 'f' [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO plugin_schema_migrations (plugin_name, version) VALUES ('tog_core', '5')[0m
+Migrating to AddUserToRatings (6)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM plugin_schema_migrations where plugin_name='tog_core'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mALTER TABLE "ratings" ADD "user_id" integer[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO plugin_schema_migrations (plugin_name, version) VALUES ('tog_core', '6')[0m
+Migrating to RemoveUserFromRatings (7)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM plugin_schema_migrations where plugin_name='tog_core'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE TEMPORARY TABLE "altered_ratings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "rateable_id" integer, "rateable_type" varchar(255), "average_rating" float, "ratings_count" integer, "created_at" datetime, "updated_at" datetime, "user_id" integer) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("ratings")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_info('index_ratings_on_rateable_id_and_rateable_type')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE INDEX "temp_index_altered_ratings_on_rateable_id_and_rateable_type" ON "altered_ratings" ("rateable_id", "rateable_type")[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mDROP TABLE "ratings"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE TABLE "ratings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "rateable_id" integer, "rateable_type" varchar(255), "average_rating" float, "ratings_count" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("altered_ratings")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('temp_index_altered_ratings_on_rateable_id_and_rateable_type')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE INDEX "index_ratings_on_rateable_id_and_rateable_type" ON "ratings" ("rateable_id", "rateable_type")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mDROP TABLE "altered_ratings"[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO plugin_schema_migrations (plugin_name, version) VALUES ('tog_core', '7')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSQLite3::SQLException: no such table: plugin_schema_info: SELECT plugin_name, version from plugin_schema_info[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM plugin_schema_migrations WHERE plugin_name = 'tog_social' order by version desc[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSQLite3::SQLException: no such table: plugin_schema_info: SELECT plugin_name, version from plugin_schema_info[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM plugin_schema_migrations where plugin_name='tog_social'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM plugin_schema_migrations where plugin_name='tog_social'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM plugin_schema_migrations where plugin_name='tog_social'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM plugin_schema_migrations where plugin_name='tog_social'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM plugin_schema_migrations where plugin_name='tog_social'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM plugin_schema_migrations where plugin_name='tog_social'[0m
+Migrating to CreateTogSocialTables (1)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM plugin_schema_migrations where plugin_name='tog_social'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCREATE TABLE "profiles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "first_name" varchar(255), "last_name" varchar(255), "website" varchar(255), "blog" varchar(255), "icon" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCREATE TABLE "groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "image" varchar(255), "state" varchar(255), "private" boolean, "moderated" boolean DEFAULT 'f', "user_id" integer, "activation_code" varchar(40), "activated_at" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE TABLE "memberships" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "group_id" integer, "moderator" boolean DEFAULT 'f', "state" varchar(255), "activation_code" varchar(40), "activated_at" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE TABLE "friendships" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "inviter_id" integer, "invited_id" integer, "status" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO plugin_schema_migrations (plugin_name, version) VALUES ('tog_social', '1')[0m
+Migrating to AddAttachmentsIconToProfile (2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM plugin_schema_migrations where plugin_name='tog_social'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mALTER TABLE "profiles" ADD "icon_file_name" varchar(255)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mALTER TABLE "profiles" ADD "icon_content_type" varchar(255)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mALTER TABLE "profiles" ADD "icon_file_size" integer[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mALTER TABLE "profiles" ADD "icon_updated_at" datetime[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE TEMPORARY TABLE "altered_profiles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "first_name" varchar(255), "last_name" varchar(255), "website" varchar(255), "blog" varchar(255), "old_file_name" varchar(255), "created_at" datetime, "updated_at" datetime, "icon_file_name" varchar(255), "icon_content_type" varchar(255), "icon_file_size" integer, "icon_updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("profiles")[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mDROP TABLE "profiles"[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mCREATE TABLE "profiles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "first_name" varchar(255), "last_name" varchar(255), "website" varchar(255), "blog" varchar(255), "old_file_name" varchar(255), "created_at" datetime, "updated_at" datetime, "icon_file_name" varchar(255), "icon_content_type" varchar(255), "icon_file_size" integer, "icon_updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("altered_profiles")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mDROP TABLE "altered_profiles"[0m
+  [4;35;1mSQL (0.8ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mTog::Config Load (1.4ms)[0m   [0;1mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_social.profile.image.versions.big') LIMIT 1[0m
+  [4;35;1mSQL (0.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mTog::Config Load (0.2ms)[0m   [0;1mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_social.profile.image.versions.medium') LIMIT 1[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mTog::Config Load (0.3ms)[0m   [0;1mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_social.profile.image.versions.small') LIMIT 1[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mTog::Config Load (0.2ms)[0m   [0;1mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_social.profile.image.versions.tiny') LIMIT 1[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mTog::Config Load (0.2ms)[0m   [0;1mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_social.profile.image.versions.big') LIMIT 1[0m
+  [4;35;1mSQL (0.8ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mTog::Config Load (0.2ms)[0m   [0;1mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_social.profile.image.versions.medium') LIMIT 1[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mTog::Config Load (0.3ms)[0m   [0;1mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_social.profile.image.versions.small') LIMIT 1[0m
+  [4;35;1mSQL (0.8ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mTog::Config Load (0.3ms)[0m   [0;1mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_social.profile.image.versions.tiny') LIMIT 1[0m
+  [4;35;1mSQL (0.8ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mTog::Config Load (1.0ms)[0m   [0;1mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.storage') LIMIT 1[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mTog::Config Load (0.2ms)[0m   [0;1mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.storage.filesystem.path') LIMIT 1[0m
+  [4;35;1mProfile Load (0.2ms)[0m   [0mSELECT * FROM "profiles" [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_profiles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "first_name" varchar(255), "last_name" varchar(255), "website" varchar(255), "blog" varchar(255), "old_file_name" varchar(255), "created_at" datetime, "updated_at" datetime, "icon_file_name" varchar(255), "icon_content_type" varchar(255), "icon_file_size" integer, "icon_updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("profiles")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mDROP TABLE "profiles"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE TABLE "profiles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "first_name" varchar(255), "last_name" varchar(255), "website" varchar(255), "blog" varchar(255), "created_at" datetime, "updated_at" datetime, "icon_file_name" varchar(255), "icon_content_type" varchar(255), "icon_file_size" integer, "icon_updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("altered_profiles")[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mDROP TABLE "altered_profiles"[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO plugin_schema_migrations (plugin_name, version) VALUES ('tog_social', '2')[0m
+Migrating to AddAttachmentsImageToGroup (3)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM plugin_schema_migrations where plugin_name='tog_social'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mALTER TABLE "groups" ADD "image_file_name" varchar(255)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mALTER TABLE "groups" ADD "image_content_type" varchar(255)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mALTER TABLE "groups" ADD "image_file_size" integer[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mALTER TABLE "groups" ADD "image_updated_at" datetime[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "old_file_name" varchar(255), "state" varchar(255), "private" boolean, "moderated" boolean DEFAULT 'f', "user_id" integer, "activation_code" varchar(40), "activated_at" datetime, "created_at" datetime, "updated_at" datetime, "image_file_name" varchar(255), "image_content_type" varchar(255), "image_file_size" integer, "image_updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("groups")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mDROP TABLE "groups"[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "old_file_name" varchar(255), "state" varchar(255), "private" boolean, "moderated" boolean DEFAULT 'f', "user_id" integer, "activation_code" varchar(40), "activated_at" datetime, "created_at" datetime, "updated_at" datetime, "image_file_name" varchar(255), "image_content_type" varchar(255), "image_file_size" integer, "image_updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("altered_groups")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mDROP TABLE "altered_groups"[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.2ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_social.group.image.versions.big') LIMIT 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.2ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_social.group.image.versions.medium') LIMIT 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.2ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_social.group.image.versions.small') LIMIT 1[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.2ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_social.group.image.versions.tiny') LIMIT 1[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.2ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_social.group.image.versions.big') LIMIT 1[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.2ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_social.group.image.versions.medium') LIMIT 1[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.2ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_social.group.image.versions.small') LIMIT 1[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.2ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_social.group.image.versions.tiny') LIMIT 1[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.2ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.storage') LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mTog::Config Load (0.2ms)[0m   [0mSELECT * FROM "config" WHERE ("config"."key" = 'plugins.tog_core.storage.filesystem.path') LIMIT 1[0m
+  [4;36;1mGroup Load (0.2ms)[0m   [0;1mSELECT * FROM "groups" [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCREATE TEMPORARY TABLE "altered_groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "old_file_name" varchar(255), "state" varchar(255), "private" boolean, "moderated" boolean DEFAULT 'f', "user_id" integer, "activation_code" varchar(40), "activated_at" datetime, "created_at" datetime, "updated_at" datetime, "image_file_name" varchar(255), "image_content_type" varchar(255), "image_file_size" integer, "image_updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("groups")[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mDROP TABLE "groups"[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCREATE TABLE "groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "state" varchar(255), "private" boolean, "moderated" boolean DEFAULT 'f', "user_id" integer, "activation_code" varchar(40), "activated_at" datetime, "created_at" datetime, "updated_at" datetime, "image_file_name" varchar(255), "image_content_type" varchar(255), "image_file_size" integer, "image_updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("altered_groups")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mDROP TABLE "altered_groups"[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO plugin_schema_migrations (plugin_name, version) VALUES ('tog_social', '3')[0m
+Migrating to CreateOauthTables (4)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM plugin_schema_migrations where plugin_name='tog_social'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "client_applications" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "url" varchar(255), "support_url" varchar(255), "callback_url" varchar(255), "key" varchar(50), "secret" varchar(50), "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE unique INDEX "index_client_applications_on_key" ON "client_applications" ("key")[0m
+  [4;35;1mSQL (3.2ms)[0m   [0mCREATE TABLE "oauth_tokens" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "type" varchar(20), "client_application_id" integer, "token" varchar(50), "secret" varchar(50), "authorized_at" datetime, "invalidated_at" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCREATE unique INDEX "index_oauth_tokens_on_token" ON "oauth_tokens" ("token")[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE TABLE "oauth_nonces" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nonce" varchar(255), "timestamp" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCREATE unique INDEX "index_oauth_nonces_on_nonce_and_timestamp" ON "oauth_nonces" ("nonce", "timestamp")[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO plugin_schema_migrations (plugin_name, version) VALUES ('tog_social', '4')[0m
+Migrating to CreateShareWithGroupTables (5)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM plugin_schema_migrations where plugin_name='tog_social'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE TABLE "group_sharings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "group_id" integer, "shareable_id" integer, "shareable_type" varchar(255), "shared_by" integer, "status" integer DEFAULT 1, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO plugin_schema_migrations (plugin_name, version) VALUES ('tog_social', '5')[0m
+Migrating to MigrateToActsAsShareable (6)
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM plugin_schema_migrations where plugin_name='tog_social'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mALTER TABLE "shares" ADD "status" integer DEFAULT 1[0m
+  [4;35;1mShare Load (0.2ms)[0m   [0mSELECT * FROM "shares" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect * from group_sharings[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mDROP TABLE "group_sharings"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO plugin_schema_migrations (plugin_name, version) VALUES ('tog_social', '6')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSQLite3::SQLException: no such table: plugin_schema_info: SELECT plugin_name, version from plugin_schema_info[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM plugin_schema_migrations WHERE plugin_name = 'tog_mail' order by version desc[0m
+  [4;35;1mSQL (1.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSQLite3::SQLException: no such table: plugin_schema_info: SELECT plugin_name, version from plugin_schema_info[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM plugin_schema_migrations where plugin_name='tog_mail'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM plugin_schema_migrations where plugin_name='tog_mail'[0m
+Migrating to CreateTogMailTables (1)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM plugin_schema_migrations where plugin_name='tog_mail'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE TABLE "folders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "user_id" integer, "deletable" boolean DEFAULT 'f', "folder_type" varchar(255), "lock_version" integer DEFAULT 0, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCREATE TABLE "messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subject" varchar(255), "content" text, "folder_id" integer, "is_read" boolean DEFAULT 'f', "from_user_id" integer, "to_user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCREATE TABLE "message_readings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "message_id" integer, "user_id" integer, "read_at" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO plugin_schema_migrations (plugin_name, version) VALUES ('tog_mail', '1')[0m
+Migrating to CreateDefaultFolders (2)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM plugin_schema_migrations where plugin_name='tog_mail'[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO plugin_schema_migrations (plugin_name, version) VALUES ('tog_mail', '2')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100114142911')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.9ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("abuses")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("activities")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_info('index_activities_on_item_type_and_item_id')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("client_applications")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mPRAGMA index_info('index_client_applications_on_key')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("comments")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_info('index_comments_on_user_id')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_info('index_comments_on_commentable_id')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("config")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_info('key')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("folders")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("friendships")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("groups")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("memberships")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("message_readings")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("messages")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("oauth_nonces")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_info('index_oauth_nonces_on_nonce_and_timestamp')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("oauth_tokens")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_info('index_oauth_tokens_on_token')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("plugin_schema_migrations")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("profiles")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("ratings")[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mPRAGMA index_info('index_ratings_on_rateable_id_and_rateable_type')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("shares")[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mPRAGMA index_list("taggings")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mPRAGMA index_info('index_taggings_on_taggable_id_and_taggable_type_and_context')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_info('index_taggings_on_tag_id')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("tags")[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mPRAGMA index_list("user_ratings")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_info('index_user_ratings_on_user_id_and_rating_id')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("users")[0m
