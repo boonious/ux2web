@@ -1,0 +1,12 @@
+[submodule "vendor/plugins/tog_user"]
+	path = vendor/plugins/tog_user
+	url = git@github.com:boonious/tog_user.git
+[submodule "vendor/plugins/tog_social"]
+	path = vendor/plugins/tog_social
+	url = git@github.com:boonious/tog_social.git
+[submodule "vendor/plugins/open_id_authentication"]
+	path = vendor/plugins/open_id_authentication
+	url = git@github.com:boonious/open_id_authentication.git
+[submodule "vendor/plugins/oauth-plugin"]
+	path = vendor/plugins/oauth-plugin
+	url = git@github.com:boonious/oauth-plugin.git
