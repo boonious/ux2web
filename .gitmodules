@@ -13,3 +13,6 @@
 [submodule "vendor/plugins/tog_core"]
 	path = vendor/plugins/tog_core
 	url = git@github.com:boonious/tog_core.git
+[submodule "vendor/plugins/restful_authentication"]
+	path = vendor/plugins/restful_authentication
+	url = git@github.com:boonious/restful-authentication.git
