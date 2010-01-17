@@ -1,11 +1,11 @@
 class InstallTogPlugins20100114142911 < ActiveRecord::Migration
   def self.up
     
-      migrate_plugin "tog_user", 1
+      migrate_plugin "tog_user", 2
     
       migrate_plugin "tog_core", 7
     
-      migrate_plugin "tog_social", 6
+      migrate_plugin "tog_social", 7
     
       migrate_plugin "tog_mail", 2
     

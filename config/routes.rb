@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :oauth_consumers,:member=>{:callback=>:get}
+
   map.routes_from_plugin 'tog_mail'
 
   map.routes_from_plugin 'tog_social'

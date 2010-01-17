@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100114142911) do
+ActiveRecord::Schema.define(:version => 20100115222642) do
 
   create_table "abuses", :force => true do |t|
     t.string   "email"
@@ -73,6 +73,17 @@ ActiveRecord::Schema.define(:version => 20100114142911) do
   end
 
   add_index "config", ["key"], :name => "key", :unique => true
+
+  create_table "consumer_tokens", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "type",       :limit => 30
+    t.string   "token",      :limit => 1024
+    t.string   "secret"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "consumer_tokens", ["token"], :name => "index_consumer_tokens_on_token", :unique => true
 
   create_table "folders", :force => true do |t|
     t.string   "name"
@@ -179,6 +190,7 @@ ActiveRecord::Schema.define(:version => 20100114142911) do
     t.string   "icon_content_type"
     t.integer  "icon_file_size"
     t.datetime "icon_updated_at"
+    t.string   "federated_profile_image_url"
   end
 
   create_table "ratings", :force => true do |t|
@@ -245,6 +257,8 @@ ActiveRecord::Schema.define(:version => 20100114142911) do
     t.boolean  "admin",                                   :default => false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "type"
+    t.string   "service_provider"
   end
 
 end
