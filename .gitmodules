@@ -10,3 +10,6 @@
 [submodule "vendor/plugins/oauth-plugin"]
 	path = vendor/plugins/oauth-plugin
 	url = git@github.com:boonious/oauth-plugin.git
+[submodule "vendor/plugins/tog_core"]
+	path = vendor/plugins/tog_core
+	url = git@github.com:boonious/tog_core.git
