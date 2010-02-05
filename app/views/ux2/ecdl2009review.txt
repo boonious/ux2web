@@ -1,0 +1,121 @@
+ECDL 2009 Reviews for Submission #68
+============================================================================ 
+
+Title: Usability and Contemporary User Experience in Digital Libraries - UX2.0
+
+Authors: Boon Low
+============================================================================
+                           REVIEWER #1
+============================================================================ 
+
+
+---------------------------------------------------------------------------
+Reviewer's Scores
+---------------------------------------------------------------------------
+
+                     Overall assessment: reject
+                              Relevance: 4
+                            Originality: 2
+                    Technical soundness: 1
+                           Presentation: 3
+                            Short-paper: No
+                         Poster or Demo: No
+
+
+---------------------------------------------------------------------------
+Comments
+---------------------------------------------------------------------------
+
+This paper proposes the extension of the conception of a digital library to
+include "UX" - user experience.
+
+Frankly, this paper is unpublishable in both HCI and DL architecture terms. It
+makes vague and generalise rhetorical statements with minimal argumentation and
+a complete absence of technical contribution.
+
+In what way is "cloud computing" [abstract] a "user centred propensity"? I well
+understand what cloud computing is, and have published in HCI for over ten
+years. I've never yet come across the term "user propensity" in either area,
+nor in digital libraries, hypertext, web research nor any other area of CS.
+This seems to be a spuriously generated term with no accepted technical
+meaning, nor is one given.
+
+Saying "UX2.0" will "fully engage" end users is a vacuous claim, as no
+definition is ever given for "fully engage". The author seems to have come
+across the term "user experience" with no grasp at all of what it is, because
+the way in which it is used here is not consistent with the normal use of the
+term in HCI. Claiming previous HCI studies have been systems centred is a
+demonstrably false and untrue claim. The work of Ann Bishop, Christine Borgman,
+Anne Adams (an author of one cited paper), Geoff Bowker is certainly not
+systems-centred, and the author is seems completely unaware of the HCI/DL canon
+of literature.
+
+The claimed "UX2.0" process has already been used, as described, in the
+development of large-scale DL software such as Greenstone (cf. publications of
+the NZDL group, particularly those of Dave Nichols).
+
+Design patterns, by the way, are not particularly tied to AJAX in any form:
+another huge inaccuracy in this paper. The author would be well advised to
+grasp the technical details he builds upon: Web 2.0 is hardly "news" in the DL
+community (see the proceedings of the main conferences: JCDL, ECDL, ICADL in
+2008), and for example Greenstone - to name but one DL - certainly includes
+AJAX support, and indeed is built in many ways upon it.
+
+============================================================================
+                           REVIEWER #2
+============================================================================ 
+
+
+---------------------------------------------------------------------------
+Reviewer's Scores
+---------------------------------------------------------------------------
+
+                     Overall assessment: reject
+                              Relevance: 5
+                            Originality: 1
+                    Technical soundness: 3
+                           Presentation: 3
+                            Short-paper: No
+                         Poster or Demo: No
+
+
+---------------------------------------------------------------------------
+Comments
+---------------------------------------------------------------------------
+
+This paper introduces a new project, namely UX2.0, aimed at enhancing user
+experience in digital library usage.
+
+The paper is essentially an announcement of the new project, offering little
+technical information, especially in what regards the original elements
+of the project, the major technical directions and the specific goals.
+Assuming that the project is at a very early stage and no concrete results can
+be reported yet, the above constitutional information is reasonably expected.
+
+============================================================================
+                           REVIEWER #3
+============================================================================ 
+
+
+---------------------------------------------------------------------------
+Reviewer's Scores
+---------------------------------------------------------------------------
+
+                     Overall assessment: reject
+                              Relevance: 4
+                            Originality: 3
+                    Technical soundness: 1
+                           Presentation: 2
+                            Short-paper: No
+                         Poster or Demo: Yes
+
+
+---------------------------------------------------------------------------
+Comments
+---------------------------------------------------------------------------
+
+This is not a research paper. It is a report of projected research and as such
+would be better as a poster with a paper entry next year after there are some
+findings. Also, the narrative is hard to follow with many concepts jumbled
+together. An actual methodology and real data that can be presented will make
+for an interesting paper in the future.

@@ -1,0 +1,28 @@
+.openid-login { 
+	font-size: 83%; 
+	width: 60%;
+	color:#888; 
+	line-height:2em;
+	background-color: #222; 
+	padding: 10px 20px 0 30px;
+	margin: 40px 0 0 110px; 
+	overflow: auto;
+	m
+	-moz-border-radius: 4px; 
+	-webkit-border-radius: 4px; 
+}
+.openid-login img { border: none; vertical-align: middle }
+.openid-login ul { list-style-type:none; display:inline }
+.openid-login ul li { padding: 0 0 0 80px }
+.openid-login ul li.highlight { background-color: #9cff96; -moz-border-radius:2px; -webkit-border-radius:2px }
+.openid-login a { color: #ee8022 }
+.openid-login a:hover { color: #9cff96; border-bottom: 1px dotted #888;}
+.openid-login fieldset { padding: 10px 0 10px 0; }
+.openid-login fieldset div { padding:10px; }
+.openid-login label { display: block; font-weight: bold; font-size: 138%; margin-bottom: 0.5em,}
+.openid-login input[type='text'] { font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif; font-size: 1em; width: 24em; }
+.openid-login input[type='submit'] { min-width: 80px; margin: 1em 0 0 45px; font-size: 120% }
+.openid-url-example-label { margin-left:50px;}
+.federated-login { margin-top: 50px;}
+.facebook-login { margin-left: 10px;}
+.hide { display: none; }

@@ -1,0 +1,126 @@
+
+<section id="commons">
+	<article>
+		<header>
+			<h2>Welcome, UX collective</h2>
+			<p class="meta"><time datetime="2009-05-12T09:00:00Z">12 May 2009</time></p>
+		</header>
+		<section>
+		<p>
+			Hi, UX2.0 is a project funded by 
+			<a href="http://www.jisc.ac.uk/whatwedo/programmes/inf11.aspx">JISC</a> 
+			(Information Environment Programme 2009-11) 
+			to undertake research and development to enhance user experience of 
+			digital libraries, through technological developments that are centered on 
+			usability inspection and evaluation. UX2.0 objectives:
+		</p>
+		<!--ul>
+			<li>To undertake usability inspection and contemporary UX techniques research</li>
+			<li>To enhance <a href="http://library.nesc.ed.ac.uk">library@nesc</a> with state‐of‐the‐art technologies</li>
+			<li>To evaluate user experience in specific contexts involving real user communities</li>
+		</ul-->
+		</section>
+	</article>
+	
+	<!--%= render :partial => "shared/homepage_comments", :locals => { :commentable => @homepage } unless @homepage.nil? %-->
+	
+	<!--article>
+		<header>
+			<h2>Outline: Web 2.0 Revisit, Usability Perspectives</h2>
+			<p class="meta"><time datetime="2009-05-13T09:00:00Z">13 May 2009</time></p>
+		</header>
+		<section>
+			<p>
+			<sup>T</sup>he contemporary experience of users on the Web has undergone 
+				marked transformations owing to trends such as Web 2.0, Cloud Computing 
+				and the associated user-centered propensities. These transformations have had 
+				widespread and significant impacts on user experience (UX) and the 
+				expectation of how digital libraries should be facilitated. 
+			</p>
+			<p>
+				UX2.0 deals with the requirement of existing digital libraries to fully engage 
+				the end users, who have become less tolerant of badly design system and expect 
+				Web 2.0 experience as norms. It aims to enhance the user experience through a 
+				technological development framework centered on usability inspection, evaluation 
+				and the <a href="http://orweblog.oclc.org/archives/001556.html">diffusion-concentration Web 2.0</a> 
+				paradigm, dealing with the integration of mashed-up services, widgets in heterogeneous 
+				environments as well as digital library as a hub.
+			</p>
+			<h3>Usability and Evaluation</h3>
+			<p>
+
+				There is a pressing need for usability studies to assess the current and 
+				future breeds of information environments such that their complex and unique 
+				nature can be better understood, well-formed and validated. 
+			</p>
+			<p>
+				In UX2.0, 
+				usability studies will be performed on a selected digital libraries (DLs) 
+				and Web 2.0 technologies. A detailed study will be carried out on library@nesc. 
+				The digital library and its subsequent enhancements are subjected to formative 
+				evaluation based on the 
+				<a href="http://www.scribd.com/doc/185523/Evaluation-of-Digital-Libraries-Fulltext">Interaction Triptych Framework (ITF)</a>
+				which recognises 
+				channels of communication between the main components of DLs: user, content and system, 
+				and aspects, viz., usability (user-system), usefulness (user-content) and 
+				performance (system-content). The evaluation will provide scientific analysis into the 
+				current area of UX development and advance the ITF as a framework for Web 2.0. 
+				The (perceived) efficacy and usability of Cloud Computing will also be evaluated.
+			</p>		
+			<h3>UX Enhancement</h3>
+			<p>
+				A key aspect of UX2.0 is the assimilation of contemporary UX techniques 
+				and Cloud Computing, to enhance the user interface and infrastructure of 
+				library@nesc. The development is based on the diffusion-concentration 
+				paradigm and spans 5 levels of technology stacks: widget, 
+				machine services, hub, repository and storage.
+			</p>
+			<p> Diffusion UX development 
+				refers to decontextualised services (widgets, machine services) from 
+				library@nesc and their use in other heterogeneous virtual environments 
+				designated by the users based on their needs. UX2.0 also considers the 
+				diffusion of technologies at infrastructure level: front-end, 
+				repository (<a href="http://www.fedora-commons.org/">Fedora</a>) and 
+				storage through Cloud Computing mechanisms. 
+				Concentration UX development targets scenarios that will enhance the 
+				role of library@nesc as a hub, through local and federated UX technologies. 
+				This involves the adoption of highly dynamic and customisable user-interface 
+				(AJAX) and DL-oriented enhancements such as customisable search targets, 
+				faceted searching, metadata and content wikis and federated social 
+				networking facilities.
+			</p>
+		</section>
+	</article>
+ -->
+
+</section>
+
+<% content_for :sidebar do %>
+	<aside class="sidebar">
+		<section>
+			<h3>Continuum...</h3>  
+			<section class="profiles">
+				<ul>
+			    	<% last_users.each do |user|%>
+               <li><%=link_to icon_for_profile(user.profile, 'small'), profile_path(user.profile)%></li>
+			      <%end %>
+			     </ul>
+			</section>
+			<br class="clearfloat"/>
+			<section>
+	 			<ul>
+			   	<%= public_continuum(10) %>
+			   </ul>
+			</section>
+	  	</section>
+		<section>
+			<h3>Twitter Updates</h3>
+			<div id="twitter_div">
+				<ul id="twitter_update_list"></ul>
+				<a href="http://twitter.com/ux2" id="twitter-link" style="display:block;text-align:left;">More.. via Twitter</a>
+			</div>
+			<script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
+			<script type="text/javascript" src="http://twitter.com/statuses/user_timeline/ux2.json?callback=twitterCallback2&amp;count=4"></script>
+		</section>
+   </aside>
+<% end %>
