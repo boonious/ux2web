@@ -9,3 +9,4 @@ config/database.yml
 config/facebooker.yml
 config/initializers/oauth_consumers.rb
 public/system/profiles/icons/**/*
+public/system/groups/**/*
