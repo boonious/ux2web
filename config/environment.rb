@@ -8,6 +8,7 @@ require File.join(File.dirname(__FILE__), 'boot')
 
 
 require 'desert'
+require 'rdiscount'
 Rails::Initializer.run do |config|
   config.reload_plugins = true if RAILS_ENV == 'development'
   config.gem 'oauth', :version => '>= 0.3.5'
@@ -53,3 +54,6 @@ Rails::Initializer.run do |config|
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   # config.i18n.default_locale = :de
 end
+
+Haml::Template.options[:format] = :html5
+Sass::Plugin.options[:style] = :compact

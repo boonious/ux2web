@@ -1,0 +1,35 @@
+!main_background_colour = #111
+!main_foreground_colour =  #bbb
+!bright_foreground = #eee
+!dull_foreground = #777
+!bright_highlight = #9cff96
+!light_highlight = #71aa5d
+!dark_highlight = #046704
+
+!large_heading_font_size = 25px
+!heading_font_size_difference = 5px
+
+=hyperlink_high_contrast
+	text-decoration: none
+	border-bottom:
+		color = !main_foreground_colour
+		width: 1px
+		style: dotted
+	color = !bright_foreground
+	
+	&:hover 
+		color = !bright_highlight
+		border-bottom:
+			color = !bright_highlight
+			width: 1px
+			style: dotted
+			
+=hyperlink_low_contrast
+	border-bottom:
+		size: 1px 
+		style: dotted 
+		color = !light_highlight
+	color = !light_highlight
+
+	&:hover
+		color = !bright_highlight

@@ -1,0 +1,120 @@
+@import surface_mixin_and_properties.sass
+
+body  
+	font: 14px/1.5 "Century Gothic"
+	background = !main_background_colour
+	color = !main_foreground_colour 
+	text-align: left
+
+h1, h2, h3 
+	font-weight: normal 
+	font-family: Georgia, Times New Roman, Times, serif
+	
+h1  
+	font-size = !large_heading_font_size
+	
+h2 
+	font-size = !large_heading_font_size - !heading_font_size_difference
+	color = !bright_highlight
+
+h3 
+	font-size = !large_heading_font_size - !heading_font_size_difference*2
+	color = !light_highlight
+	font-style: oblique
+
+a	
+	+hyperlink_high_contrast
+			
+b, strong
+	font-weight: bold
+
+img 
+	padding: 5px
+	margin: 0 
+	border: none
+
+ul 
+	list-style: circle
+
+//ol { list-style: upper-roman; }
+//dd { color: #aaa; }
+
+p.meta  
+	color = !dull_foreground
+	font-size: 90%
+	b 
+		color: #ccc
+		font-weight: normal
+
+//article footer 
+	background: #111
+	
+.headerTitle1 
+	text-shadow: 2px 2px 2px #000 
+	color = !main_foreground_colour
+	font-size: 1.6em
+	
+.headerTitle2 
+	text-shadow: 2px 2px 2px #000
+	color = !bright_highlight
+	font-size: 1.6em
+
+//.columns { -moz-column-count: 2; -webkit-column-count: 2; -moz-column-gap: normal; -webkit-column-gap: normal; }
+//.columns sup { font-size:4em; font-family: Times New Roman, Times, serif; line-height:100%; text-decoration:none; }
+
+.sidebar 
+	font-size: 88%
+
+.sidebar a, footer a
+	+hyperlink_low_contrast
+		
+.sidebar .profiles 
+	a, a:hover
+		border-bottom: none
+	li 
+		list-style: none
+		
+//.sidebar .tag-cloud a, .sidebar .blog-list a { color: #bbb; border-bottom: 1px dotted #bbb; }
+//.sidebar .tag-cloud a:hover, .sidebar .blog-list a:hover { color: #71aa5d; border-bottom: 1px dotted #71aa5d; }
+
+.meta 
+	opacity: 0.9
+
+//.comment { background-color:#222; -moz-border-radius:5px; -webkit-border-radius:5px; }
+//.comment-homepage { font-size: 90%; }
+//.comment-header { font-size: 90%; }
+//.comment-twitter-counter { font-size: 133% }
+//.comment-twitter-counter-homepage { font-size: 133% }
+//.blog-snippet { font-size: 90%; }
+
+footer 
+	background = !main_background_colour - #111
+	color = !dull_foreground + #111
+	padding: 1em 0 1em 4.5em
+	font-size: 88%
+	p 
+		font-size: 12px
+		line-height: 1.5em
+
+#menu, #header_options 
+	li 
+		list-style-type: none 
+		display: inline
+		margin-right: 1em 
+		padding-right: 1em 
+		border-right: 
+			size: 2px 
+			style: solid 
+			color = !dark_highlight
+		
+		&.on a
+			background: #111
+			color = !bright_highlight
+		
+		&.last 
+			border-right: none
+
+#page, #container 
+	padding: 1em 2em 
+	z-index: 2
+
