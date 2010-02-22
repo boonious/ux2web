@@ -2,8 +2,6 @@
 	%article
 		%header
 			%h2 Welcome, UX collective
-			%p.meta
-				%time{:datetime => "2009-05-12T09:00:00Z"} 12 May 2009
 		%section
 			%p 
 				Hi, UX2.0 is a project funded by 
@@ -12,23 +10,69 @@
 				to undertake research and development to enhance user experience of 
 				digital libraries, through technological developments that are centered on 
 				usability inspection and evaluation.
-				
+	%article
+		%header
+			%h2 Usability Inspection of Digital Libraries
+		%section
+			%p 
+				The project has conducted a heuristics evaluation on a selection of digital libraries. 
+				The study not only informs the subsequent evaluation work of UX2.0, it is generally useful for 
+				the JISC Community and includes a survey of emerging interaction design patterns in digital libraries.
+			%p
+				:markdown
+					More from the [Project report](http://bit.ly/ux2inspectionreport).
+
+	%h2 Project Blogs
+	%section.col-left
+		%img{:src=>"/images/boon.jpg"}
+		%h3 Enhancing User Interactions
+		%p 
+			%a{:href=>"http://homepages.ed.ac.uk/boon"} Boon Low,
+			%a{:href=>"http://boonious.typepad.com/ux2/"} Blog
+			%br
+			Manager, Developer
+		- @boon_feed.entries.each do |entry|
+			%article
+				%header
+					%p
+						%a{:href=>entry.url} 
+							=entry.title
+					%time{:datetime=>entry.date_published.strftime("%Y-%m-%dT%I:%M%:%SZ")}
+						=entry.date_published.strftime("%d %B %Y, %I:%M%p")						
+				%section
+					=entry.description
+					%a{:href=>entry.url} more
+		%footer
+			%a{:href=>"http://boonious.typepad.com/ux2"} Other posts from this blog..
+		
+	%section.col-right
+		%img{:src=>"/images/lorraine.jpg"}
+		%h3 Researching Usability 
+		%p 
+			%a{:href=>"http://twitter.com/lorraine_p"} Lorraine Paterson,
+			%a{:href=>"http://lorrainepaterson.wordpress.com/"} Blog
+			%br 
+			Usability Analyst
+		- @lorraine_feed.entries[0..2].each do |entry|
+			%article
+				%header
+					%p
+						%a{:href=>entry.url} 
+							=entry.title
+					%time{:datetime=>entry.date_published.strftime("%Y-%m-%dT%I:%M%:%SZ")}
+						=entry.date_published.strftime("%d %B %Y, %I:%M%p")
+				%section
+					=entry.description	
+					%a{:href=>entry.url} more
+		%footer
+			%a{:href=>"http://lorrainepaterson.wordpress.com/"} Other posts from this blog..
+			
 - content_for :sidebar do
 	%aside.sidebar
-		%section
-			%h3 Continuum...
-			%section.profiles 
-				%ul
-					- last_users.each do |user|
-						%li=link_to icon_for_profile(user.profile, 'small'), profile_path(user.profile)
-			%br.clearfloat
-			%section
-				%ul
-					=public_continuum(5)
 		%section
 			%h3 Twitter Updates
 			#twitter_div
 				%ul#twitter_update_list
 				%a#twitter-link{:href=>"http://twitter.com/ux2", :style=>"display:block;text-align:left;"} More.. via Twitter
 			%script{:type=>"text/javascript",:src=>"http://twitter.com/javascripts/blogger.js"}
-			%script{:type=>"text/javascript",:src=>"http://twitter.com/statuses/user_timeline/ux2.json?callback=twitterCallback2&amp;count=4"}
+			%script{:type=>"text/javascript",:src=>"http://twitter.com/statuses/user_timeline/ux2.json?callback=twitterCallback2&amp;count=8"}

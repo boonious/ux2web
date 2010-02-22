@@ -9,20 +9,8 @@
 %meta{:name=>"keywords", :content=>"usability, user experience, digital libraries"}
 %meta{:name=>"author", :content=>"Boon Low"}
 
--#%link{:rel=>"icon", :href=>"/tog_core/images/favicon.ico"}
--#%link{:rel=>"stylesheet", :href=>"/tog_core/stylesheets/template.css", :media=>"screen", :type=>"text/css"}
--#%link{:rel=>"stylesheet", :href=>"/tog_core/stylesheets/style.css", :media=>"screen", :type=>"text/css"}
--#%link{:rel=>"stylesheet", :href=>"/tog_core/stylesheets/pages.css", :media=>"screen", :type=>"text/css"}
 %link{:rel=>"stylesheet", :href=>"/stylesheets/surface.css", :type=>"text/css"}
 %link{:rel=>"stylesheet", :href=>"/stylesheets/layout.css", :type=>"text/css"}
-
-=inject_autodiscovery
--#=inject_js
--#=inject_css
-
-%script{:src=>"/javascripts/jquery.js", :type=>"text/javascript"}
-%script{:src=>"/javascripts/jquery.charactercounter.js", :type=>"text/javascript"}
--#%script{:src=>"/javascripts/application.js", :type=>"text/javascript"}
 
 %section#page
 	%header
@@ -43,5 +31,3 @@
 	= yield
 	
 = render :partial => "/shared/footer"
-
-	

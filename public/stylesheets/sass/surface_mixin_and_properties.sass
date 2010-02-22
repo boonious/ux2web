@@ -9,6 +9,13 @@
 !large_heading_font_size = 25px
 !heading_font_size_difference = 5px
 
+!large_text_font_size = 16px
+!text_font_size_difference = 2px
+
+=main_body_font
+	color = !main_foreground_colour
+	font: 14px/1.5 "Century Gothic"
+
 =hyperlink_high_contrast
 	text-decoration: none
 	border-bottom:
@@ -25,7 +32,8 @@
 			style: dotted
 			
 =hyperlink_low_contrast
-	border-bottom:
+	border: none
+	// border-bottom:
 		size: 1px 
 		style: dotted 
 		color = !light_highlight
@@ -33,3 +41,24 @@
 
 	&:hover
 		color = !bright_highlight
+
+=horizontal_links_menu
+	ul
+		padding: 0 0 
+
+	li 
+		display: inline
+		margin-right: 1em
+		padding-right: 1em 
+		border-right: 
+			width: 1px
+			style: solid 
+			color = !dark_highlight
+	
+		&.on a
+			background: #111
+			color = !bright_highlight
+	
+		&.last 
+			border-right: none
+			padding-right: 0px

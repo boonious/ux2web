@@ -1,7 +1,7 @@
 @import surface_mixin_and_properties.sass
 
 body  
-	font: 14px/1.5 "Century Gothic"
+	+main_body_font 
 	background = !main_background_colour
 	color = !main_foreground_colour 
 	text-align: left
@@ -42,7 +42,7 @@ ul
 p.meta  
 	color = !dull_foreground
 	font-size: 90%
-	b 
+	b
 		color: #ccc
 		font-weight: normal
 
@@ -50,12 +50,10 @@ p.meta
 	background: #111
 	
 .headerTitle1 
-	text-shadow: 2px 2px 2px #000 
 	color = !main_foreground_colour
 	font-size: 1.6em
 	
 .headerTitle2 
-	text-shadow: 2px 2px 2px #000
 	color = !bright_highlight
 	font-size: 1.6em
 
@@ -73,12 +71,65 @@ p.meta
 		border-bottom: none
 	li 
 		list-style: none
-		
+
+#twitter_update_list
+	li
+		margin: 1.5em 0
+	
 //.sidebar .tag-cloud a, .sidebar .blog-list a { color: #bbb; border-bottom: 1px dotted #bbb; }
 //.sidebar .tag-cloud a:hover, .sidebar .blog-list a:hover { color: #71aa5d; border-bottom: 1px dotted #71aa5d; }
 
 .meta 
-	opacity: 0.9
+	font-size = !large_text_font_size - !text_font_size_difference
+	
+.col-left, .col-right
+	article
+		header
+			p
+				a
+					+hyperlink_low_contrast
+					font-weight: bold
+			time
+				font-size: smaller
+		section
+			a
+				+hyperlink_low_contrast
+	footer
+		background-color = !main_background_colour
+		font-size: 100%		
+		a
+			+hyperlink_high_contrast
+					
+.or-signup
+	+main_body_font 
+	padding: 0 0 0 5px
+
+.twitter
+	border-bottom: none
+	
+	&:hover
+		border-bottom: none
+input
+	font-size = !large_text_font_size
+	background-color = !bright_foreground
+	padding: 4px
+	border:
+		width: 1px
+		style: solid
+		color = !dull_foreground
+		
+.button
+	padding: 5px 10px 6px 10px
+	color = !bright_foreground
+	background-color = !dark_highlight
+	text-decoration: none
+	text-shadow: 0 -1px 5px rgba(0,0,0,0.25)
+	border: 1px solid rgba(0,0,0,0.25)
+	-moz-border-radius: 5px
+	-webkit-border-radius: 5px
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5)
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5)
+	cursor: pointer
 
 //.comment { background-color:#222; -moz-border-radius:5px; -webkit-border-radius:5px; }
 //.comment-homepage { font-size: 90%; }
@@ -96,23 +147,8 @@ footer
 		font-size: 12px
 		line-height: 1.5em
 
-#menu, #header_options 
-	li 
-		list-style-type: none 
-		display: inline
-		margin-right: 1em 
-		padding-right: 1em 
-		border-right: 
-			size: 2px 
-			style: solid 
-			color = !dark_highlight
-		
-		&.on a
-			background: #111
-			color = !bright_highlight
-		
-		&.last 
-			border-right: none
+#menu, #header_options, .cols-2
+	+horizontal_links_menu
 
 #page, #container 
 	padding: 1em 2em 
