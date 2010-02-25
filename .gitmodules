@@ -16,3 +16,6 @@
 [submodule "vendor/plugins/restful_authentication"]
 	path = vendor/plugins/restful_authentication
 	url = git@github.com:boonious/restful-authentication.git
+[submodule "vendor/plugins/acts_as_shareable"]
+	path = vendor/plugins/acts_as_shareable
+	url = git@github.com:boonious/acts_as_shareable.git
