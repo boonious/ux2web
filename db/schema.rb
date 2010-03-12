@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100115222642) do
+ActiveRecord::Schema.define(:version => 20100311203714) do
 
   create_table "abuses", :force => true do |t|
     t.string   "email"
@@ -118,6 +118,7 @@ ActiveRecord::Schema.define(:version => 20100115222642) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.string   "type"
   end
 
   create_table "memberships", :force => true do |t|
@@ -204,12 +205,29 @@ ActiveRecord::Schema.define(:version => 20100115222642) do
 
   add_index "ratings", ["rateable_id", "rateable_type"], :name => "index_ratings_on_rateable_id_and_rateable_type"
 
+  create_table "shared_objects", :force => true do |t|
+    t.string   "title",        :default => ""
+    t.text     "content",      :default => ""
+    t.string   "type"
+    t.integer  "user_id"
+    t.boolean  "approved",     :default => false
+    t.boolean  "spam",         :default => false
+    t.string   "state"
+    t.datetime "published_at"
+    t.string   "name"
+    t.string   "email"
+    t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "shares", :force => true do |t|
     t.integer  "user_id"
     t.string   "shareable_type", :limit => 30
     t.integer  "shareable_id"
     t.string   "shared_to_type", :limit => 30
     t.integer  "shared_to_id"
+    t.string   "state",          :limit => 30
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "status",                       :default => 1
