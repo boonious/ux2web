@@ -1,0 +1,49 @@
+%section#commons
+	%section.col-left
+		%header
+			=icon_for_profile(@profile, 'small')
+			%h3= @profile.full_name
+			%p 
+				= I18n.t('tog_social.profiles.model.username')
+				= @profile.user.login
+	%br.clearfloat
+	- if current_user
+		- form_for :shared_object, @shared_object, :url => member_create_shared_object_path(@profile.user.groups.first.id), :html => {:method => "post"} do |f|
+			%fieldset
+				%h3
+					Share, New Post 
+					%span.heading-explanatory - message, blog, link etc.
+				%p
+					= f.text_area :content, :class=>"fieldbox", :style=>"width:450px; height:100px;"
+					%br
+					= submit_tag 'Share this!', :class => 'button'
+					Or 
+					= link_to 'Create using full editor', member_new_shared_object_path(@profile.user.groups.first.id)
+	- else
+		%section.notice-main
+			%p
+				%h3
+					= link_to I18n.t("tog_core.views.shared.header_options.login"), login_path
+					to post something here
+					
+
+	-if @profile.user.sharings.size == 0
+		=render :partial => 'profile_summary'
+						
+	- for sharing in @sharings
+		%section{:id=>"sharing_"+ sharing.id.to_s}
+			= render :partial => '/shared/shared_object_properties_actions', :locals => {:sharing => sharing, :profile => @profile}
+			
+		%section
+		-if !sharing.shareable.title.blank?
+			-h3= link_to sharing.shareable.title, shared_object_path(sharing.shareable.id)
+		= sanitize(textilize(sharing.shareable.content[0..500]), :tags => (Tog::Plugins.settings :tog_core, 'sanitized.comments.allowed_tags').split, :attributes => (Tog::Plugins.settings :tog_core, 'sanitized.comments.allowed_attributes').split)
+		= link_to("More..",  shared_object_path(sharing.shareable.id)) unless sharing.shareable.content.size < 500
+		
+-content_for :sidebar do
+	%aside.sidebar
+		%section
+		- if @profile.user.sharings.size >= 1
+			=render :partial => 'profile_summary'
+
+

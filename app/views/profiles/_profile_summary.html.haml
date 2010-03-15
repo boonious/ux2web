@@ -1,0 +1,16 @@
+%section
+	-if !@profile.user.groups.blank?
+		%h3= I18n.t('tog_social.groups.site.title')
+		%ul
+		-for group in @profile.user.groups[1..-1]
+			%li= link_to group.name, group_path(group)
+		
+%section
+	%h3= I18n.t('tog_social.more_links')
+	%ul
+	-if its_me?
+		%li= link_to I18n.t('tog_social.profiles.site.edit_profile'), edit_member_profile_path(@profile)
+	-else
+		%li= link_to I18n.t('tog_social.profiles.site.send_message'), member_new_message_to_path(@profile.user)
+//		%li= report_abuse_link @profile
+//		%li= following_options(@profile)

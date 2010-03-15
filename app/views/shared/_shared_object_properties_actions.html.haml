@@ -1,0 +1,40 @@
+%p
+	From 
+	= link_to sharing.shareable.user.profile.full_name, '/'+sharing.shareable.user.login
+	, about 
+	= time_ago_in_words(sharing.created_at)
+	ago - 
+	= I18n.l(sharing.created_at, :format => :short)
+	
+	- if current_user == sharing.shareable.user
+		= link_to "Edit", edit_member_shared_object_path(sharing.shareable.id)
+	
+	- if current_user == sharing.shareable.user
+		|
+		= link_to "Delete", member_delete_shared_object_path(sharing.shared_to.id,sharing.shareable.id,:all), :method => :post
+	- elsif current_user == sharing.shared_to.author || sharing.shared_to.moderators.include?(current_user)
+		|
+		= link_to "Delete", member_delete_shared_object_path(sharing.shared_to.id,sharing.shareable.id,:sharing), :method => :post
+	
+	- if sharing.shareable.state == "draft" && current_user == sharing.shareable.user
+		%br 
+		Draft version only you can see this
+		= link_to "Make public", member_publish_shared_object_path(sharing.shareable.id)
+		
+	- other_groups = related_shared_to(sharing, sharing.shared_to)
+	- if other_groups.size!=0
+		%br
+		Also shared in:
+		-for other_group in other_groups
+			= group_or_homepage_link(other_group) 
+		= link_to 'Edit sharings', member_share_existing_shared_object_path(sharing.shareable.id)  if current_user == sharing.shareable.user
+	- else
+		- if current_user == sharing.shareable.user
+			%br
+			= link_to 'Share this with other groups', member_share_existing_shared_object_path(sharing.shareable.id)
+	- if sharing.state == 'pending'
+		%br
+		%strong Pending 
+		awaiting approval (not viewable publically).
+		- if current_user == profile.user
+			= link_to 'Approve this', member_approve_sharing_path(sharing.id)
