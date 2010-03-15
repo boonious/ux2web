@@ -24,13 +24,15 @@
 
 	%h2 Project Blogs
 	%section.col-left
-		%img{:src=>"/images/boon.jpg"}
-		%h3 Enhancing User Interactions
-		%p 
-			%a{:href=>"http://homepages.ed.ac.uk/boon"} Boon Low,
-			%a{:href=>"http://boonious.typepad.com/ux2/"} Blog
-			%br
-			Manager, Developer
+		%header
+			%img{:src=>"/images/boon.jpg"}
+			%h3 Enhancing User Interactions
+			%p
+				%a{:href=>"http://homepages.ed.ac.uk/boon"} Boon Low,
+				%a{:href=>"http://boonious.typepad.com/ux2/"} Blog
+				%br
+				Manager, Developer
+
 		- @boon_feed.entries.each do |entry|
 			%article
 				%header
@@ -46,13 +48,15 @@
 			%a{:href=>"http://boonious.typepad.com/ux2"} Other posts from this blog..
 		
 	%section.col-right
-		%img{:src=>"/images/lorraine.jpg"}
-		%h3 Researching Usability 
-		%p 
-			%a{:href=>"http://twitter.com/lorraine_p"} Lorraine Paterson,
-			%a{:href=>"http://lorrainepaterson.wordpress.com/"} Blog
-			%br 
-			Usability Analyst
+		%header
+			%img{:src=>"/images/lorraine.jpg"}
+			%h3 Researching Usability
+			%p
+				%a{:href=>"http://twitter.com/lorraine_p"} Lorraine Paterson,
+				%a{:href=>"http://lorrainepaterson.wordpress.com/"} Blog
+				%br
+				Usability Analyst
+
 		- @lorraine_feed.entries[0..2].each do |entry|
 			%article
 				%header

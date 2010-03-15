@@ -23,21 +23,16 @@ h3
 	font-style: oblique
 
 a	
-	+hyperlink_high_contrast
+	+bright_hyperlink_high_contrast
 			
 b, strong
 	font-weight: bold
 
 img 
-	padding: 5px
-	margin: 0 
 	border: none
 
 ul 
 	list-style: circle
-
-//ol { list-style: upper-roman; }
-//dd { color: #aaa; }
 
 p.meta  
 	color = !dull_foreground
@@ -45,6 +40,17 @@ p.meta
 	b
 		color: #ccc
 		font-weight: normal
+
+fieldset
+	border: none
+
+input
+	font-size = !large_text_font_size
+	background-color = !bright_foreground
+	border:
+		width: 1px
+		style: solid
+		color = !dull_foreground
 
 //article footer 
 	background: #111
@@ -57,6 +63,14 @@ p.meta
 	color = !bright_highlight
 	font-size: 1.6em
 
+.notice
+	+bright_round_notice_area
+
+.notice-main
+	+bright_round_notice_area
+	a
+		+dark_hyperlink_low_contrast
+
 //.columns { -moz-column-count: 2; -webkit-column-count: 2; -moz-column-gap: normal; -webkit-column-gap: normal; }
 //.columns sup { font-size:4em; font-family: Times New Roman, Times, serif; line-height:100%; text-decoration:none; }
 
@@ -64,17 +78,13 @@ p.meta
 	font-size: 88%
 
 .sidebar a, footer a
-	+hyperlink_low_contrast
+	+bright_hyperlink_low_contrast
 		
 .sidebar .profiles 
 	a, a:hover
 		border-bottom: none
 	li 
 		list-style: none
-
-#twitter_update_list
-	li
-		margin: 1.5em 0
 	
 //.sidebar .tag-cloud a, .sidebar .blog-list a { color: #bbb; border-bottom: 1px dotted #bbb; }
 //.sidebar .tag-cloud a:hover, .sidebar .blog-list a:hover { color: #71aa5d; border-bottom: 1px dotted #71aa5d; }
@@ -87,36 +97,27 @@ p.meta
 		header
 			p
 				a
-					+hyperlink_low_contrast
+					+bright_hyperlink_low_contrast
 					font-weight: bold
 			time
 				font-size: smaller
 		section
 			a
-				+hyperlink_low_contrast
+				+bright_hyperlink_low_contrast
 	footer
 		background-color = !main_background_colour
 		font-size: 100%		
 		a
-			+hyperlink_high_contrast
+			+bright_hyperlink_high_contrast
 					
-.or-signup
+.heading-explanatory
 	+main_body_font 
-	padding: 0 0 0 5px
 
 .twitter
 	border-bottom: none
 	
 	&:hover
 		border-bottom: none
-input
-	font-size = !large_text_font_size
-	background-color = !bright_foreground
-	padding: 4px
-	border:
-		width: 1px
-		style: solid
-		color = !dull_foreground
 		
 .button
 	padding: 5px 10px 6px 10px

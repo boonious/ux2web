@@ -16,7 +16,16 @@
 	color = !main_foreground_colour
 	font: 14px/1.5 "Century Gothic"
 
-=hyperlink_high_contrast
+=bright_round_notice_area
+	color = !dark_highlight
+	background-color = !bright_highlight
+	font-size: 0.9em
+	-webkit-border-radius: 6px
+	-moz-border-radius: 6px
+	h3
+		color = !dark_highlight
+
+=bright_hyperlink_high_contrast
 	text-decoration: none
 	border-bottom:
 		color = !main_foreground_colour
@@ -31,7 +40,7 @@
 			width: 1px
 			style: dotted
 			
-=hyperlink_low_contrast
+=bright_hyperlink_low_contrast
 	border: none
 	// border-bottom:
 		size: 1px 
@@ -41,6 +50,21 @@
 
 	&:hover
 		color = !bright_highlight
+
+=dark_hyperlink_low_contrast
+	text-decoration: none
+	border-bottom:
+		color = !dark_highlight
+		width: 1px
+		style: dotted
+	color = !dark_highlight
+
+	&:hover
+		color = !main_background_colour
+		border-bottom:
+			color = !main_background_colour
+			width: 1px
+			style: dotted
 
 =horizontal_links_menu
 	ul

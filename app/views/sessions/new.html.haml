@@ -2,7 +2,7 @@
 	%section.col-left
 		%h2 
 			= I18n.t('tog_user.sessions.new')
-			%span{:class=>"or-signup"}
+			%span.heading-explanatory
 				Or
 				= link_to "Sign up", signup_path
 
@@ -26,7 +26,7 @@
 					= check_box_tag 'remember_me'
 					%label{:for=>"remember_me"}
 						= I18n.t("tog_user.sessions.remember_me")
-				%li{:class=>"last"}
+				%li.last
 					= link_to "#{I18n.t('tog_user.sessions.password_forgotten')}", forgot_path
 		
 			= submit_tag I18n.t('tog_user.sessions.sign_in'), :class => "button"
@@ -35,7 +35,6 @@
 	%section.col-right
 		%h2
 			Or 
-			%span{:class=>"or-signup"}
-				login with Twitter
+			%span.heading-explanatory login with Twitter
 			%p
 				= link_to image_tag('/images/federated_login/twitter-bird.png'), {:controller =>:oauth_consumers, :action=>:show,  :id=>:twitter}, {:class=>"twitter", :title=>"Login with Twitter"}
