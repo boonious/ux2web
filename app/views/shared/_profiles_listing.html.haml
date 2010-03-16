@@ -1,0 +1,8 @@
+%h3= title + "(" + items.size.to_s + ")"
+
+%ul
+- unless items.blank?
+	- for item in items
+		%li= link_to icon_for_profile(item, 'small'), profile_path(item), :title => item.full_name
+- else
+	%li= no_items

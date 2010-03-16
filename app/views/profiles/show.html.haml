@@ -23,22 +23,21 @@
 		%section.notice-main
 			%p
 				%h3
-					= link_to I18n.t("tog_core.views.shared.header_options.login"), login_path
-					to post something here
+					= link_to(I18n.t("tog_core.views.shared.header_options.login"), login_path) + ' to post something here'
 					
-
 	-if @profile.user.sharings.size == 0
 		=render :partial => 'profile_summary'
 						
 	- for sharing in @sharings
-		%section{:id=>"sharing_"+ sharing.id.to_s}
-			= render :partial => '/shared/shared_object_properties_actions', :locals => {:sharing => sharing, :profile => @profile}
+		%article
+			%header{:id=>"sharing_"+ sharing.id.to_s}
+				= render :partial => '/shared/shared_object_properties_actions', :locals => {:sharing => sharing, :profile => @profile}
 			
-		%section
-		-if !sharing.shareable.title.blank?
-			-h3= link_to sharing.shareable.title, shared_object_path(sharing.shareable.id)
-		= sanitize(textilize(sharing.shareable.content[0..500]), :tags => (Tog::Plugins.settings :tog_core, 'sanitized.comments.allowed_tags').split, :attributes => (Tog::Plugins.settings :tog_core, 'sanitized.comments.allowed_attributes').split)
-		= link_to("More..",  shared_object_path(sharing.shareable.id)) unless sharing.shareable.content.size < 500
+			%section
+			-if !sharing.shareable.title.blank?
+				-h3= link_to sharing.shareable.title, shared_object_path(sharing.shareable.id)
+			= sanitize(textilize(sharing.shareable.content[0..500]), :tags => (Tog::Plugins.settings :tog_core, 'sanitized.comments.allowed_tags').split, :attributes => (Tog::Plugins.settings :tog_core, 'sanitized.comments.allowed_attributes').split)
+			= link_to("More..",  shared_object_path(sharing.shareable.id)) unless sharing.shareable.content.size < 500
 		
 -content_for :sidebar do
 	%aside.sidebar
