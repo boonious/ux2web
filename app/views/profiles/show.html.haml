@@ -35,7 +35,7 @@
 			
 			%section
 			-if !sharing.shareable.title.blank?
-				-h3= link_to sharing.shareable.title, shared_object_path(sharing.shareable.id)
+				%h3= link_to sharing.shareable.title, shared_object_path(sharing.shareable.id)
 			= sanitize(textilize(sharing.shareable.content[0..500]), :tags => (Tog::Plugins.settings :tog_core, 'sanitized.comments.allowed_tags').split, :attributes => (Tog::Plugins.settings :tog_core, 'sanitized.comments.allowed_attributes').split)
 			= link_to("More..",  shared_object_path(sharing.shareable.id)) unless sharing.shareable.content.size < 500
 		
