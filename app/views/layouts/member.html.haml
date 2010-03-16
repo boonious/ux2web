@@ -16,7 +16,7 @@
 %link{:rel=>"stylesheet", :href=>"/stylesheets/surface.css", :type=>"text/css"}
 %link{:rel=>"stylesheet", :href=>"/stylesheets/layout.css", :type=>"text/css"}
 
-=inject_autodiscovery
+-#=inject_autodiscovery
 -#=inject_js
 -#=inject_css
 
@@ -37,7 +37,7 @@
 				%h1.headerTitle2 in Digital Libraries
 			%a{:href=>"http://www.jisc.ac.uk/", :title=>"Joint Information Systems Committee homepage"}
 				%img.jisclogo{:src=>"/images/JISCcolour15.png"}
-		%nav#menu=links_for_navigation :site
+		%nav#menu=links_for_navigation :member
 	%br.clearfloat
 	= yield :sidebar
 	= yield
