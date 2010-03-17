@@ -1,0 +1,16 @@
+%section#commons
+	%h2= I18n.t('tog_social.groups.site.title')
+	%p= link_to I18n.t('tog_social.groups.site.create_group'), new_member_group_path, :class => 'button add'
+	%section
+		%ul
+			- @groups.each do |group|
+				%li
+					=link_to image_for_group(group, 'medium'), group_path(group)
+					= link_to group.name, group_path(group)
+					%p= group.description
+					%p= I18n.t('tog_social.groups.model.members', :count => group.members.size)
+
+-content_for :sidebar do
+	%aside.sidebar
+		= render :partial => "search_box"
+		= render :partial => "last_groups"

@@ -1,0 +1,42 @@
+%section#commons
+	%h2= I18n.t('tog_social.groups.site.create_group') 
+	= error_messages_for :group
+	
+	- form_for(:group, :url=>member_groups_path, :html=>{:multipart=>true}) do |f|
+		%fieldset
+			%p
+				%label{:for=>"group_name"}= I18n.t('tog_social.groups.model.name')
+				%br
+				= f.text_field  :name, :class => 'fieldbox wide', :size => 35
+			%p
+				%label{:for=>"group_description"}= I18n.t('tog_social.groups.model.description')
+				%br
+				= f.text_area  :description, :class => 'fieldbox wide', :size => '60x10'
+			%p
+				%label{:for=>"group_tag_list"}= I18n.t('tog_social.tags.tags')
+				%br
+				= f.text_field  :tag_list, :class => 'fieldbox', :size => 35
+				%br
+				%span.helpinfo= I18n.t('tog_social.tags.separated_by_comma')
+			%p
+				%label{:for=>"group_image"}= I18n.t('tog_social.groups.model.image')
+				%br
+				= image_for_group(@group, 'medium')
+				%br
+				= file_field "group", "image"
+				%br
+				%span.helpinfo= I18n.t('tog_social.groups.model.image_help')
+			%p
+				%label.nolabel{:for=>"group_private"}
+					= f.check_box :private
+					= I18n.t('tog_social.groups.model.private')
+				%br
+				%span.helpinfo= I18n.t('tog_social.groups.model.private_help')
+			%p
+				%label.nolabel{:for=>"group_moderated"}
+				= f.check_box :moderated
+				= I18n.t('tog_social.groups.model.moderated')
+				%br
+				%span.helpinfo= I18n.t('tog_social.groups.model.moderated_help')
+	     
+		= submit_tag I18n.t('tog_social.groups.site.create'), :class => "button"

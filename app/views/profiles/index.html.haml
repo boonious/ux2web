@@ -1,0 +1,9 @@
+%section#commons
+	%h2= I18n.t('tog_social.profiles.site.title')
+	%section
+		%ul
+		- @profiles.each do |profile|
+			%li
+				=link_to icon_for_profile(profile, 'medium'), profile_path(profile), :title => profile.full_name
+				%br
+				= profile.full_name

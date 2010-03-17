@@ -52,6 +52,11 @@
 				%li= I18n.t('tog_social.groups.site.member')
 				%br
 				= link_to(I18n.t('tog_social.groups.site.leave'), leave_group_path(@group), :confirm => I18n.t('tog_social.groups.site.leave_confirm'), :class => 'delete')
+				-if i_am_moderator_of @group
+					%br
+					= link_to I18n.t('tog_social.groups.member.edit'), edit_member_group_path(@group)
+					%br
+					= link_to I18n.t('tog_social.groups.member.members_pending', :size => @group.pending_members.size), member_group_pending_members_path(@group)
 			- else
 				%li= link_to I18n.t('tog_social.groups.site.join'), join_group_path(@group), :class => 'add'
 		
