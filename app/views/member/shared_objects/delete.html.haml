@@ -1,0 +1,40 @@
+%section#commons
+	%h2 Delete
+	- if @related_sharings.size > 1
+		%p You are about to delete the post shown below. Are you sure? This post has been shared with
+		%ul
+		- for related_sharing in @related_sharings
+			%li= title_link_for_group_object(related_sharing.shared_to)
+		- form_for :shared_object, @shared_object, :url => member_destroy_shared_object_path, :html => {:method => :delete} do |f|
+			%section
+				= submit_tag 'Delete All', :class => 'button', :style=>"background-color:#e40600; font-weight:bold; font-size:110%; padding:0.5em 1em; border: none;"
+				= submit_tag 'Cancel', :class => 'button', :style=>"font-weight:bold; font-size:110%; padding:0.5em 1em; border: none;"
+				Or 
+				= link_to 'Edit Sharing', member_share_existing_shared_object_path
+	- else
+		- if params[:mode] =='sharing'
+			%p 
+				You are about to remove the following post from
+				= link_to(@shared_to.name, @shared_to) + " (the original post still exists unless " + link_to(@shareable.user.profile.full_name, profile_path(@shareable.user.profile)) + " choose to delete it). Are you sure?"
+			- form_for :shared_object, @shared_object, :url => member_destroy_shared_object_path, :html => {:method => :delete} do |f|
+				%section
+					= submit_tag 'Remove from Group', :class => 'button', :style=>"background-color:#e40600; font-weight:bold; font-size:110%; padding:0.5em 1em; border: none;"
+					= submit_tag 'Cancel', :class => 'button', :style=>"font-weight:bold; font-size:110%; padding:0.5em 1em; border: none;"
+		- else
+			%p You are about to delete the post shown below. Are you sure?
+			- form_for :shared_object, @shared_object, :url => member_destroy_shared_object_path, :html => {:method => :delete} do |f|
+				%section
+					= submit_tag 'Delete', :class => 'button', :style=>"background-color:#e40600; font-weight:bold; font-size:110%; padding:0.5em 1em; border: none;"
+					= submit_tag 'Cancel', :class => 'button', :style=>"font-weight:bold; font-size:110%; padding:0.5em 1em; border: none;"
+					
+	%section
+		%p
+			Submitted by 
+			= link_to(@shareable.user.profile.full_name, profile_path(@shareable.user.profile)) + ', about' 
+			= time_ago_in_words(@shareable.created_at) + ' ago - ' + I18n.l(@shareable.created_at, :format => :short)
+	
+	%section
+		- if !@shareable.title.blank?
+			%h3= link_to @shareable.title, shared_objects_path + '/' + @shareable.id.to_s
+		= sanitize(textilize(@shareable.content[0..500]), :tags => (Tog::Plugins.settings :tog_core, 'sanitized.comments.allowed_tags').split, :attributes => (Tog::Plugins.settings :tog_core, 'sanitized.comments.allowed_attributes').split)
+		= link_to("More..",  shared_objects_path + '/' + @shareable.id.to_s) unless @shareable.content.size < 500

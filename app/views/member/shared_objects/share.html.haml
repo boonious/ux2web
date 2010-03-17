@@ -1,0 +1,20 @@
+%section#commons
+	%h2 Share the Post with
+	= error_messages_for :shared_object
+	
+	-if current_user.groups.size > 1
+		-form_for :shared_object, @shared_object, :url=> member_update_shared_object_path(@shareable.id),:html => { :method => :put } do |f|
+			%fieldset
+				%h3
+					My subscribed groups
+					%span.heading-explanatory - unchecked to remove share
+				%p
+					- for group in current_user.groups[1..-1]
+						= check_box_tag 'other_group[]', group.id, @shared_to.include?(group.id)
+						= group.name
+						%br
+				%section
+					= submit_tag 'Update This', :class => 'button'
+					= submit_tag 'Cancel', :class => 'button'
+	-else
+		%p= link_to 'Create or join some groups to share objects with.', '/groups'

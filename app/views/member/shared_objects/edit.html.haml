@@ -1,0 +1,8 @@
+%section#commons
+	%h2 Edit Post
+	= error_messages_for :shared_object
+	- form_for(:shared_object, @shareable, :url=> member_update_shared_object_path(@shareable.id),:html => { :method => :put }) do |f|
+		%fieldset
+			= render :partial => 'common_form', :locals => {:f => f}
+			= submit_tag 'Save This', :class => 'button'
+			= submit_tag 'Cancel', :class => 'button'
