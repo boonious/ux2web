@@ -37,7 +37,8 @@
 				%h1.headerTitle2 in Digital Libraries
 			%a{:href=>"http://www.jisc.ac.uk/", :title=>"Joint Information Systems Committee homepage"}
 				%img.jisclogo{:src=>"/images/JISCcolour15.png"}
-		%nav#menu=links_for_navigation :member
+		%nav#menu
+			%ul=links_for_navigation :member
 	%br.clearfloat
 	= yield :sidebar
 	= yield
