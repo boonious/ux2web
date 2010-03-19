@@ -1,7 +1,7 @@
 %section#commons
 	%h2= I18n.t('tog_social.groups.site.title')
 	%p= link_to I18n.t('tog_social.groups.site.create_group'), new_member_group_path, :class => 'button add'
-	%section
+	%section.horizontal_links_layout.no_border
 		%ul
 			- @groups.each do |group|
 				%li

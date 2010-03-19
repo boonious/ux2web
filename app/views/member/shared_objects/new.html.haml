@@ -1,0 +1,26 @@
+%section#commons
+	%h2 Create a New Post
+	= error_messages_for :shared_object
+	
+	- form_for :shared_object, @shared_object, :url => member_create_shared_object_path do |f|
+		%fieldset
+			= render :partial => 'common_form', :locals => {:f => f}
+			
+			- if current_user.groups.size > 1
+				Also share this with the following groups which I've subscribed to:
+				%p
+				- for group in current_user.groups[1..-1] 
+					- if params[:group_id]==group.id.to_s
+						= check_box_tag '', group.id, true, :disabled => true
+						= group.name + "(posting to this group)"
+						%br
+					- else
+						= check_box_tag 'other_group[]', group.id, @shared_to.include?(group.id) 
+						= group.name
+						%br
+			%br			
+			= submit_tag 'Create This', :class => 'button'
+			= submit_tag 'Cancel', :class => 'button grey'
+	
+	
+	

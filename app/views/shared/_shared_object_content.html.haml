@@ -1,0 +1,24 @@
+%section.content_area
+	-if !sharing.shareable.title.blank?
+		%h3= link_to sharing.shareable.title, shared_object_path(sharing.shareable.id)
+	= sanitize(textilize(sharing.shareable.content[0..500]), :tags => (Tog::Plugins.settings :tog_core, 'sanitized.comments.allowed_tags').split, :attributes => (Tog::Plugins.settings :tog_core, 'sanitized.comments.allowed_attributes').split)
+	= link_to("More..",  shared_object_path(sharing.shareable.id)) unless sharing.shareable.content.size < 500
+	
+
+	%p.meta
+		- other_groups = related_shared_to(sharing, sharing.shared_to)	
+		- if other_groups.size!=0
+			Also shared to:
+			-for other_group in other_groups
+				= group_or_homepage_link(other_group) 
+			- if current_user == sharing.shareable.user
+				[
+				= link_to 'Edit sharings', member_share_existing_shared_object_path(sharing.shareable.id)  
+				]
+				
+		- if sharing.state == 'pending'
+			%br
+			%strong Pending 
+			awaiting approval (not viewable publically).
+			- if current_user == profile.user
+				= link_to 'Approve this', member_approve_sharing_path(sharing.id)

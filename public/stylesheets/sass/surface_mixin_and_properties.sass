@@ -5,6 +5,7 @@
 !bright_highlight = #9cff96
 !light_highlight = #71aa5d
 !dark_highlight = #046704
+!red = #e40600
 
 !large_heading_font_size = 25px
 !heading_font_size_difference = 5px
@@ -16,14 +17,23 @@
 	color = !main_foreground_colour
 	font: 14px/1.5 "Century Gothic"
 
-=bright_round_notice_area
-	color = !dark_highlight
-	background-color = !bright_highlight
-	font-size: 0.9em
-	-webkit-border-radius: 6px
-	-moz-border-radius: 6px
+=bright_round_notice_area(!color = !dark_highlight, !background = !bright_highlight, !top_left_corner = 6px, !top_right_corner = 6px, !bottom_right_corner = 6px, !bottom_left_corner = 6px)
+	color = !color
+	background-color = !background
+	border-top-left-radius = !top_left_corner
+	border-top-right-radius = !top_right_corner
+	border-bottom-left-radius = !bottom_left_corner
+	border-bottom-right-radius = !bottom_right_corner
+	-webkit-border-top-left-radius = !top_left_corner
+	-webkit-border-top-right-radius = !top_right_corner
+	-webkit-border-bottom-left-radius = !bottom_left_corner
+	-webkit-border-bottom-right-radius = !bottom_right_corner
+	-moz-border-top-left-radius = !top_left_corner
+	-moz-border-top-right-radius = !top_right_corner
+	-moz-border-bottom-left-radius = !bottom_left_corner
+	-moz-border-bottom-right-radius = !bottom_right_corner
 	h3
-		color = !dark_highlight
+		color = !color
 
 =bright_hyperlink_high_contrast
 	text-decoration: none
@@ -66,23 +76,17 @@
 			width: 1px
 			style: dotted
 
-=horizontal_links_menu
-	ul
-		padding: 0 0 
-
+=links_with_divide
 	li 
-		display: inline
-		margin-right: 1em
-		padding-right: 1em 
 		border-right: 
 			width: 1px
 			style: solid 
 			color = !dark_highlight
-	
+
 		&.on a
 			background: #111
 			color = !bright_highlight
-	
+
 		&.last 
 			border-right: none
 			padding-right: 0px

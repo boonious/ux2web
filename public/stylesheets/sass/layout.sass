@@ -17,7 +17,6 @@ aside
 	
 h1, p.meta 
 	margin: 0 
-	line-height: 1.2
 
 img
 	padding: 5px
@@ -47,7 +46,7 @@ img
 	float: right 
 	width: 200px
 
-.notice-main
+.notice_main
 	margin: 1em 0
 	padding: 8px 40px
 	width: 68%
@@ -56,6 +55,9 @@ img
 	clear: both 
 	height: 0px 
 
+.horizontal_links_layout
+	+horizontal_links
+	
 //.columns  
 	-moz-column-count: 2
 	webkit-column-count: 2 
@@ -98,12 +100,13 @@ img
 //form .actions { text-align: left;}
 
 #menu 
-	margin-top: 7em 
-	margin-left: 1em
+	margin: 7em 1em 3em 1em 
+	+horizontal_links
 	
 #header_options 
 	text-align: right
-	
+	+horizontal_links("none")
+
 #page 
 	margin: 0.3em 0em 0.3em 1em
 	z-index: 2 
@@ -120,7 +123,8 @@ img
 .cols-2	
 	padding: 0 0 4em 1em
 	overflow: auto
-
+	+horizontal_links
+	
 .col-left
 	float: left
 	width = !commons_section_width/2 - 3em
@@ -163,6 +167,14 @@ input
 
 .button
 	padding: 5px 10px 6px 10px
+	
+.info_pane
+	padding: 1em
+	margin: 0
+
+.content_area
+	padding: 1em
+	margin-bottom: 1em
 
 //#twitter_update_list li { margin-bottom: 1em; }
 //#twitter_update_list span { display:block; }

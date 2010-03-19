@@ -34,15 +34,11 @@ img
 ul 
 	list-style: circle
 
-p.meta  
-	color = !dull_foreground
-	font-size: 90%
-	b
-		color: #ccc
-		font-weight: normal
-
 fieldset
 	border: none
+
+.block
+	display: block
 
 input
 	font-size = !large_text_font_size
@@ -51,22 +47,24 @@ input
 		width: 1px
 		style: solid
 		color = !dull_foreground
-
+.wide
+	width: 88%
+	
 //article footer 
 	background: #111
 	
-.headerTitle1 
+.header_title1 
 	color = !main_foreground_colour
 	font-size: 1.6em
 	
-.headerTitle2 
+.header_title2 
 	color = !bright_highlight
 	font-size: 1.6em
 
 .notice
 	+bright_round_notice_area
 
-.notice-main
+.notice_main
 	+bright_round_notice_area
 	a
 		+dark_hyperlink_low_contrast
@@ -76,6 +74,8 @@ input
 
 .sidebar 
 	font-size: 88%
+	li
+		list-style: circle
 
 .sidebar a, footer a
 	+bright_hyperlink_low_contrast
@@ -89,8 +89,18 @@ input
 //.sidebar .tag-cloud a, .sidebar .blog-list a { color: #bbb; border-bottom: 1px dotted #bbb; }
 //.sidebar .tag-cloud a:hover, .sidebar .blog-list a:hover { color: #71aa5d; border-bottom: 1px dotted #71aa5d; }
 
-.meta 
-	font-size = !large_text_font_size - !text_font_size_difference
+p.meta 
+	color = !dull_foreground
+	font-size = !large_text_font_size - !text_font_size_difference*2
+	line-height: 1.5em
+	b
+		color: #ccc
+		font-weight: normal
+
+.no_border
+	border: none
+	a
+		border: none
 	
 .col-left, .col-right
 	article
@@ -120,9 +130,10 @@ input
 		border-bottom: none
 		
 .button
-	padding: 5px 10px 6px 10px
+	padding: 0.5em 1em
 	color = !bright_foreground
 	background-color = !dark_highlight
+	font-size: 110%
 	text-decoration: none
 	text-shadow: 0 -1px 5px rgba(0,0,0,0.25)
 	border: 1px solid rgba(0,0,0,0.25)
@@ -132,7 +143,19 @@ input
 	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5)
 	cursor: pointer
 
-//.comment { background-color:#222; -moz-border-radius:5px; -webkit-border-radius:5px; }
+.red
+	background-color = !red
+
+.grey
+	background-color = !dull_foreground
+	
+.info_pane
+	line-height: 1.5em
+	+bright_round_notice_area(!bright_foreground,!dull_foreground-#444,"6px","6px","0","0")
+
+.content_area
+	+bright_round_notice_area(!bright_foreground,!dull_foreground-#555,"0","0","6px","6px")
+	
 //.comment-homepage { font-size: 90%; }
 //.comment-header { font-size: 90%; }
 //.comment-twitter-counter { font-size: 133% }
@@ -149,7 +172,7 @@ footer
 		line-height: 1.5em
 
 #menu, #header_options, .cols-2
-	+horizontal_links_menu
+	+links_with_divide
 
 #page, #container 
 	padding: 1em 2em 

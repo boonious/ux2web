@@ -1,0 +1,30 @@
+%section#commons
+	%h2= @shared_object.title if !@shared_object.title.blank?
+	-if @shared_object.state == 'shared' || @shared_object.user == current_user
+		%section.col-left
+			%header
+				=icon_for_profile(@shared_object.user.profile, 'small')
+				%p.meta
+					= @shared_object.user.profile.full_name!='' ? link_to(@shared_object.user.profile.full_name, '/' + @shared_object.user.login) : link_to(@shared_object.user.login, '/' + @shared_object.user.login)
+					%br
+					About 
+					= time_ago_in_words(@shared_object.created_at) + " ago" 
+					%br
+					=I18n.l(@shared_object.created_at, :format => :short)										
+		%br.clearfloat
+		%p
+		- if @shared_object.state == "draft" && current_user == @shared_object.user
+			%strong Only you can see this
+			= link_to "Make Public", member_publish_shared_object_path(@shared_object.id) 
+			|
+		- if current_user == @shared_object.user
+			= link_to "Edit", edit_member_shared_object_path(@shared_object.id)
+			|
+			= link_to "Delete", member_delete_shared_object_path(nil,@shared_object.id,:all), :method => :post
+		
+		%p
+		%section.content_area
+			= sanitize(markdown(@shared_object.content), :tags => (Tog::Plugins.settings :tog_core, 'sanitized.allowed_tags').split, :attributes => (Tog::Plugins.settings :tog_core, 'sanitized.allowed_attributes').split)
+	-else
+		%section
+			%p This object is in draft form and not currently available.

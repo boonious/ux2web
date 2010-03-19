@@ -1,8 +1,8 @@
 %section#commons
+	%h2= @group.name
 	%section.col-left
 		%header
 			=link_to image_for_group(@group, 'medium', :class=>"img"), group_path(@group)
-			%h3= link_to @group.name, group_path(@group)
 			%p 
 				= I18n.t('tog_social.groups.model.created_at') + @group.created_at.strftime("%d/%m/%Y") 
 				%br 
@@ -10,10 +10,10 @@
 				%br
 				= I18n.t('tog_social.groups.model.moderated_by')
 				- for moderator in @group.moderators
-					=link_to moderator.profile.full_name, profile_path(moderator.profile), :class=> 'maincolor4'				
+					=link_to moderator.profile.full_name, profile_path(moderator.profile), :class=> 'maincolor4'	
 	%br.clearfloat
 	%p= @group.description
-
+	
 	-if current_user and @group.members.include?(current_user)
 		- form_for :shared_object, @shared_object, :url => member_create_shared_object_path(@group.id), :html => {:method => "post"} do |f|
 			%fieldset
@@ -27,7 +27,7 @@
 					Or 
 					= link_to 'Create using full editor', member_new_shared_object_path(@group.id)
 	-elsif current_user
-		%section.notice-main
+		%section.notice_main
 			%p
 				%h3
 					=  link_to(I18n.t('tog_social.groups.site.join'), join_group_path(@group)) + ' to post something here'
@@ -36,12 +36,7 @@
 		%article
 			%header{:id=>"sharing_"+ sharing.id.to_s}
 				= render :partial => '/shared/shared_object_properties_actions', :locals => {:sharing => sharing, :profile => @profile}
-			
-			%section
-				-if !sharing.shareable.title.blank?
-					-h3= link_to sharing.shareable.title, shared_object_path(sharing.shareable.id)
-				= sanitize(textilize(sharing.shareable.content[0..500]), :tags => (Tog::Plugins.settings :tog_core, 'sanitized.comments.allowed_tags').split, :attributes => (Tog::Plugins.settings :tog_core, 'sanitized.comments.allowed_attributes').split)
-				= link_to("More..",  shared_object_path(sharing.shareable.id)) unless sharing.shareable.content.size < 500
+			= render :partial => '/shared/shared_object_content', :locals => {:sharing => sharing}
 
 -content_for :sidebar do
 	%aside.sidebar
@@ -49,14 +44,11 @@
 			%h3= I18n.t('tog_social.more_links')
 			%ul
 			- if i_am_member_of @group
-				%li= I18n.t('tog_social.groups.site.member')
-				%br
-				= link_to(I18n.t('tog_social.groups.site.leave'), leave_group_path(@group), :confirm => I18n.t('tog_social.groups.site.leave_confirm'), :class => 'delete')
+				= I18n.t('tog_social.groups.site.member')
+				%li= link_to(I18n.t('tog_social.groups.site.leave'), leave_group_path(@group), :confirm => I18n.t('tog_social.groups.site.leave_confirm'), :class => 'delete')
 				-if i_am_moderator_of @group
-					%br
-					= link_to I18n.t('tog_social.groups.member.edit'), edit_member_group_path(@group)
-					%br
-					= link_to I18n.t('tog_social.groups.member.members_pending', :size => @group.pending_members.size), member_group_pending_members_path(@group)
+					%li= link_to I18n.t('tog_social.groups.member.edit'), edit_member_group_path(@group)
+					%li= link_to I18n.t('tog_social.groups.member.members_pending', :size => @group.pending_members.size), member_group_pending_members_path(@group)
 			- else
 				%li= link_to I18n.t('tog_social.groups.site.join'), join_group_path(@group), :class => 'add'
 		
