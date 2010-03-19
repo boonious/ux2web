@@ -4,6 +4,6 @@
 		%ul
 		- @profiles.each do |profile|
 			%li
-				=link_to icon_for_profile(profile, 'small'), profile_path(profile), :title => profile.full_name
+				=link_to icon_for_profile(profile, 'small'), "/"+ profile.user.login, :title => profile.full_name
 				%br
 				=profile.full_name
