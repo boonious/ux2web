@@ -19,6 +19,12 @@
 					= submit_tag 'Share this!', :class => 'button'
 					Or 
 					= link_to 'Create using full editor', member_new_shared_object_path(@profile.user.groups.first.id)
+					- unless current_user.service_provider.nil?
+						- if current_user.service_provider.include? 'twitter'
+							%span
+								= check_box_tag :twitter
+								Send to Twitter
+						-#	%span#character_counter{:style=>"visibility:hidden;"} 140
 	- else
 		%section.notice_main
 			%p
