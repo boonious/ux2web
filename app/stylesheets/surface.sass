@@ -2,8 +2,8 @@
 
 body  
 	+main_body_font 
-	background = !main_background_colour
-	color = !main_foreground_colour 
+	background: $main_background_colour
+	color: $main_foreground_colour 
 	text-align: left
 
 h1, h2, h3 
@@ -11,15 +11,15 @@ h1, h2, h3
 	font-family: Georgia, Times New Roman, Times, serif
 	
 h1  
-	font-size = !large_heading_font_size
+	font-size: $large_heading_font_size
 	
 h2 
-	font-size = !large_heading_font_size - !heading_font_size_difference
-	color = !bright_highlight
+	font-size: $large_heading_font_size - $heading_font_size_difference
+	color: $bright_highlight
 
 h3 
-	font-size = !large_heading_font_size - !heading_font_size_difference*2
-	color = !light_highlight
+	font-size: $large_heading_font_size - $heading_font_size_difference*2
+	color: $light_highlight
 	font-style: oblique
 
 a	
@@ -41,12 +41,12 @@ fieldset
 	display: block
 
 input
-	font-size = !large_text_font_size
-	background-color = !bright_foreground
+	font-size: $large_text_font_size
+	background-color: $bright_foreground
 	border:
 		width: 1px
 		style: solid
-		color = !dull_foreground
+		color: $dull_foreground
 .wide
 	width: 88%
 	
@@ -54,11 +54,11 @@ input
 	background: #111
 	
 .header_title1 
-	color = !main_foreground_colour
+	color: $main_foreground_colour
 	font-size: 1.6em
 	
 .header_title2 
-	color = !bright_highlight
+	color: $bright_highlight
 	font-size: 1.6em
 
 .notice
@@ -90,8 +90,8 @@ input
 //.sidebar .tag-cloud a:hover, .sidebar .blog-list a:hover { color: #71aa5d; border-bottom: 1px dotted #71aa5d; }
 
 p.meta 
-	color = !dull_foreground
-	font-size = !large_text_font_size - !text_font_size_difference*2
+	color: $dull_foreground
+	font-size: $large_text_font_size - $text_font_size_difference*2
 	line-height: 1.5em
 	b
 		color: #ccc
@@ -115,7 +115,7 @@ p.meta
 			a
 				+bright_hyperlink_low_contrast
 	footer
-		background-color = !main_background_colour
+		background-color: $main_background_colour
 		font-size: 100%		
 		a
 			+bright_hyperlink_high_contrast
@@ -131,8 +131,8 @@ p.meta
 		
 .button
 	padding: 0.5em 1em
-	color = !bright_foreground
-	background-color = !dark_highlight
+	color: $bright_foreground
+	background-color: $dark_highlight
 	font-size: 110%
 	text-decoration: none
 	text-shadow: 0 -1px 5px rgba(0,0,0,0.25)
@@ -144,27 +144,17 @@ p.meta
 	cursor: pointer
 
 .red
-	background-color = !red
+	background-color: $red
 
 .grey
-	background-color = !dull_foreground
+	background-color: $dull_foreground
 	
 .info_pane
 	line-height: 1.5em
-	+bright_round_notice_area(!bright_foreground,!dull_foreground-#444,"6px","6px","0","0")
-
-.content_area
-	+bright_round_notice_area(!bright_foreground,!dull_foreground-#555,"0","0","6px","6px")
-	
-//.comment-homepage { font-size: 90%; }
-//.comment-header { font-size: 90%; }
-//.comment-twitter-counter { font-size: 133% }
-//.comment-twitter-counter-homepage { font-size: 133% }
-//.blog-snippet { font-size: 90%; }
-
+ 
 footer 
-	background = !main_background_colour - #111
-	color = !dull_foreground + #111
+	background: $main_background_colour - #111
+	color: $dull_foreground + #111
 	padding: 1em 0 1em 4.5em
 	font-size: 88%
 	p 

@@ -1,0 +1,19 @@
+$page_width: 75em
+$commons_section_width: 48em
+$sidebar_width: 24em
+
+$blueprint_grid_columns : 8
+$blueprint_grid_width : 40px
+
+@import blueprint
+
+=horizontal_links($direction: left)
+	ul
+		padding: 0
+		
+	li 	
+		float: $direction
+		display: inline
+		margin-right: 0.5em
+		padding-right: 0.5em
+		text-align: center
