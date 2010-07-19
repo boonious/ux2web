@@ -15,3 +15,6 @@ public/stylesheets/surface.css
 public/stylesheets/surface_mixin_and_properties.css
 public/stylesheets/layout_mixin_and_properties.css
 public/feeds/*
+public/stylesheets/ie.css
+public/stylesheets/print.css
+public/stylesheets/screen.css

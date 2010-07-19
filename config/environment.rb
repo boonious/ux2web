@@ -22,6 +22,8 @@ Rails::Initializer.run do |config|
   config.gem 'tog-tog', :lib => 'tog', :version => '>= 0.5'
   config.gem 'mislav-will_paginate', :lib => 'will_paginate', :version => '~> 2.3.6'
   config.gem 'desert', :lib => 'desert', :version => '>= 0.5.2'
+  config.gem "compass", :version => ">= 0.10.2"
+  
   # Settings in config/environments/* take precedence over those specified here.
   # Application configuration should go into files in config/initializers
   # -- all .rb files in that directory are automatically loaded.
