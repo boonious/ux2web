@@ -1,42 +1,74 @@
-@import surface_mixin_and_properties.sass
+@import partials/surface_mixin_and_properties
 
-body  
-	+main_body_font 
-	background: $main_background_colour
-	color: $main_foreground_colour 
-	text-align: left
-
-h1, h2, h3 
-	font-weight: normal 
+body
+	+blueprint-typography(true)
+	// background: url(../images/grid.png)
+	header.masthead
+		margin: 0
+		nav
+			height: $baseline_grid_size*2		
+			background-color: $bright_highlight
+			+link-colors(#fff)
+	h5
+		color: $dark_highlight
+		
+#header_options, .cols-2
+	+links_with_divide
+	
+h1, h2, h3, h4, h5
 	font-family: Georgia, Times New Roman, Times, serif
-	
-h1  
-	font-size: $large_heading_font_size
-	
-h2 
-	font-size: $large_heading_font_size - $heading_font_size_difference
-	color: $bright_highlight
 
-h3 
-	font-size: $large_heading_font_size - $heading_font_size_difference*2
-	color: $light_highlight
-	font-style: oblique
+hr 	
+	border-top: 0 
+	border-left: 0 
+	border-right: 0 
+	margin-top: $baseline_grid_size - $baseline_grid_size/2
+	border-bottom:
+		width: $baseline_grid_size/2
+		style: solid
+		color: $bright_highlight
 
-a	
-	+bright_hyperlink_high_contrast
+.project_title
+	h3:first-child
+		padding-top: $baseline_grid_size/2
+		color: $dark_highlight
+	h3
+		margin: 0 0 0 $baseline_grid_size/2
+		color: $loud_color
+
+.jisc_logo
+	padding-top: $baseline_grid_size
+
+.blog_listing
+	margin: $baseline_grid_size 0 0 0
+	header:first-child
+		margin: 0
+	h6
+		margin: 0
+
+.sidebar 
+	font-size: 88%
+	line-height: $baseline_grid_size
+	li
+		list-style: circle
+
+footer
+	&.main_footer
+		font-size: 88%
+		line-height: $baseline_grid_size
+		margin-top: $baseline_grid_size/2
+		border-top:
+			width: $baseline_grid_size/2
+			style: solid
+			color: $bright_highlight
+
+.footer_address
+	text-align: left
 			
-b, strong
-	font-weight: bold
-
-img 
-	border: none
-
-ul 
-	list-style: circle
-
+//-- to be refactored
 fieldset
 	border: none
-
+	
 .block
 	display: block
 
@@ -47,20 +79,10 @@ input
 		width: 1px
 		style: solid
 		color: $dull_foreground
+				
 .wide
 	width: 88%
 	
-//article footer 
-	background: #111
-	
-.header_title1 
-	color: $main_foreground_colour
-	font-size: 1.6em
-	
-.header_title2 
-	color: $bright_highlight
-	font-size: 1.6em
-
 .notice
 	+bright_round_notice_area
 
@@ -68,26 +90,8 @@ input
 	+bright_round_notice_area
 	a
 		+dark_hyperlink_low_contrast
-
-//.columns { -moz-column-count: 2; -webkit-column-count: 2; -moz-column-gap: normal; -webkit-column-gap: normal; }
-//.columns sup { font-size:4em; font-family: Times New Roman, Times, serif; line-height:100%; text-decoration:none; }
-
-.sidebar 
-	font-size: 88%
-	li
-		list-style: circle
-
-.sidebar a, footer a
-	+bright_hyperlink_low_contrast
 		
 .sidebar .profiles 
-	a, a:hover
-		border-bottom: none
-	li 
-		list-style: none
-	
-//.sidebar .tag-cloud a, .sidebar .blog-list a { color: #bbb; border-bottom: 1px dotted #bbb; }
-//.sidebar .tag-cloud a:hover, .sidebar .blog-list a:hover { color: #71aa5d; border-bottom: 1px dotted #71aa5d; }
 
 p.meta 
 	color: $dull_foreground
@@ -101,28 +105,7 @@ p.meta
 	border: none
 	a
 		border: none
-	
-.col-left, .col-right
-	article
-		header
-			p
-				a
-					+bright_hyperlink_low_contrast
-					font-weight: bold
-			time
-				font-size: smaller
-		section
-			a
-				+bright_hyperlink_low_contrast
-	footer
-		background-color: $main_background_colour
-		font-size: 100%		
-		a
-			+bright_hyperlink_high_contrast
 					
-.heading-explanatory
-	+main_body_font 
-
 .twitter
 	border-bottom: none
 	
@@ -151,20 +134,9 @@ p.meta
 	
 .info_pane
 	line-height: 1.5em
- 
-footer 
-	background: $main_background_colour - #111
-	color: $dull_foreground + #111
-	padding: 1em 0 1em 4.5em
-	font-size: 88%
-	p 
-		font-size: 12px
-		line-height: 1.5em
 
-#menu, #header_options, .cols-2
-	+links_with_divide
 
-#page, #container 
-	padding: 1em 2em 
-	z-index: 2
+
+	
+
 

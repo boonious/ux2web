@@ -1,44 +1,82 @@
-@import layout_mixin_and_properties.sass
+@import partials/layout_mixin_and_properties
 
-body  
-	margin: 0 0
+body
 	position: relative
 	text-align: left
-	
-article, header, nav, section, footer, address, aside 
-	display: block
-	
-address
-	width: 20em
-	float: right
-	
-aside 
-	margin: 0 0 4em 0
-	
-h1, p.meta 
-	margin: 0 
 
-img
-	padding: 5px
-	margin: 0
+#left_header_menu 
+	+column(15)
+	+horizontal_links
 
+#right_header_menu
+	+column(16)
+	+last
+	+horizontal_links("none")
+	text-align: right
+
+#page 
+	+container
+	z-index: 2
+
+#commons 
+	+column(20)
+	padding: 0
+		
 .logo
-	float: left 
-	margin-top: -2em
+	+column(3)
+	margin-top: $baseline_grid_size
 	
-.jisclogo 
-	float: left 
-	margin: 0em 1em 1em 0
+.project_title
+	+column(17)
+	height: $baseline_grid_size*6
+	margin-top: $baseline_grid_size
+	
+.jisc_logo 
+	+column(11)
+	+last
+	margin-top: $baseline_grid_size
 
-.projectTitle
-	width: 455px
-	float: left
-	
-.headerTitle2  
-	width: 215px
-	margin-left: 5px 
-	float: right 
-	display: inline
+.col_left
+	+column(10)
+
+.col_right
+	+column(10)
+	+last
+
+.col_left, .col_right
+	header
+		img
+			+column(2.5)
+		section
+			+column(7)		
+	article, footer
+		+column(10)
+			
+.sidebar 
+	+column(11)
+	+last
+
+footer
+	+column(31)
+
+.footer_info
+	+column(20)
+
+.footer_address 
+	+column(11)
+	+last
+
+//----
+.sidebar
+	.profiles 
+		ul  
+			display: block 
+			margin-left: -33px
+		li 
+			float: left
+			margin-left: -8px
+	.publicfeeds ul  
+		margin-top: 8em
 
 .notice 
 	margin: 0 4em 0 0
@@ -51,114 +89,26 @@ img
 	padding: 8px 40px
 	width: 68%
 
-.clearfloat 
-	clear: both 
-	height: 0px 
-
 .horizontal_links_layout
 	+horizontal_links
 	
-//.columns  
-	-moz-column-count: 2
-	webkit-column-count: 2 
-	-moz-column-gap: normal
-	-webkit-column-gap: normal
-	
-//.columns sup  
-	vertical-align: top 
-	float:left 
-	margin-right:15px
-
-.sidebar 
-	width: $sidebar_width
-	display: inline 
-	float: right 
-	margin-top: 12px
-
-.sidebar 	
-	ul
-		margin-left: -1em
-		width: 22em
-		
-	.profiles 
-		ul  
-			display: block 
-			margin-left: -33px
-			
-		li 
-			float: left
-			margin-left: -8px
-			
-	.publicfeeds ul  
-		margin-top: 8em
-
-#twitter_update_list
+#twitter_update_list		
 	li
-		margin: 1.5em 0
+		margin: $baseline_grid_size 0
+		a
+			padding-left: 0
+			
+#twitter_div
+	a
+		padding-left: 3.333em
 
 //form .fields p { position: relative; margin: 0 0 1em 30%; padding: 0; clear: both; line-height: 1.2em;}
 //form .actions { text-align: left;}
-
-#menu 
-	margin: 7em 1em 3em 1em 
-	+horizontal_links
 	
-#header_options 
-	text-align: right
-	+horizontal_links("none")
-
-#page 
-	margin: 0.3em 0em 0.3em 1em
-	z-index: 2 
-	position: relative
-	width: $page_width
-	
-#commons 
-	position: relative 
-	width: $commons_section_width
-	margin: 0 0 1em 1em
-	display: block 
-	float: left
-
 .cols-2	
-	padding: 0 0 4em 1em
 	overflow: auto
 	+horizontal_links
-	
-.col-left
-	float: left
-	width: $commons_section_width/2 - 3em
-	padding: 0 3em 0 0
-
-.col-right
-	float: left
-	width: $commons_section_width/2 - 3em
-	padding: 0 0 0 3em
-
-.col-left, .col-right
-	h3	
-		margin: 0
-	img
-		float: left
-		padding: 0 1em 0 0
-		-moz-border-radius: 2px
-		-webkit-border-radius: 2px
-	p
-		margin: 0
-	
-	article
-		margin: 2em 0 0 0
-		
-		header
-			margin: 0 0 0.5em 0
-	
-	footer
-		margin: 2em 0 0 0
-		padding: 0
-		
-article footer 
-	padding: 0
-
+			
 .heading-explanatory
 	padding: 0 0 0 5px
 
@@ -179,21 +129,3 @@ input
 //#twitter_update_list li { margin-bottom: 1em; }
 //#twitter_update_list span { display:block; }
 //#twitter-link { margin-left:2.3em; }
-
-footer 
-	display: block
-	clear: both
-	position: relative
-	overflow: auto
-	
-#footerContent 
-	width: 85em
-	
-#footerCenter 
-	width: 38em
-	float: right
-	margin: 0 2em 0 2em
-	
-#footerLeft 
-	width: 54em
-	
