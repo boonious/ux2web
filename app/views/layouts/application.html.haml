@@ -25,22 +25,24 @@
 -#%script{:src=>"/javascripts/application.js", :type=>"text/javascript"}
 
 %section#page
-	%header
-		%nav#header_options
-			= render :partial => "shared/header_options"
+	%header.masthead
+		%nav
+			%section#left_header_menu 
+				%ul=links_for_navigation :site
+			%section#right_header_menu
+				= render :partial => "shared/header_options"
 		= render_flash_messages
-		%section
+		%section.logo
 			%a{:href=>"/", :title=>"ux2.0 project homepage"}
-				%img{:class=>"ux2.0 logo", :src=>"/images/projectLogoGreen.png"}
-			%section.projectTitle
-				%h1.header_title1 Usability &amp; Contemporary User Experience
-				%h1.header_title2 in Digital Libraries
+				%img{:src=>"/images/projectLogoGreen.png"}
+		%section.project_title
+			%h3 Usability &amp; Contemporary User Experience
+			%h3 in Digital Libraries
+		%section.jisc_logo
 			%a{:href=>"http://www.jisc.ac.uk/", :title=>"Joint Information Systems Committee homepage"}
-				%img.jisclogo{:src=>"/images/JISCcolour15.png"}
-		%nav#menu 
-			%ul=links_for_navigation :site
-	%br.clearfloat
-	= yield :sidebar
+				%img{:src=>"/images/JISCcolour15.png"}
+
 	= yield
-	
-= render :partial => "/shared/footer"
+	= yield :sidebar
+
+	= render :partial => "/shared/footer"
