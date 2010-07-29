@@ -1,5 +1,21 @@
-%footer
-	%section#footerContent
+%footer.main_footer
+	%section.footer_info
+		%p
+			This is a beta site based on the 
+			%a{:href=>"http://www.toghq.com/"} tog platform.
+			It is currently best viewed with modern browsers such as 
+			%a{:href=>"http://www.google.com/chrome"} Chrome,
+			%a{:href=>"http://www.mozilla.com/firefox/"} Firefox
+			and
+			%a{:href=>"http://www.apple.com/safari/"} Safari.
+			Work is underway for other browsers compliance, full comment and blog facilities.
+		%p	
+			:markdown
+				The site will feature the [digital library](http://library.nesc.ed.ac.uk)
+				to be enhanced under this project. The library is based on a range of open source systems: 
+				[Fedora](http://www.fedora-commons.org/),	[Blacklight](http://blacklight.rubyforge.org/),
+				[Solr](http://lucene.apache.org/solr/) &amp; [Orbeon Forms](http://www.orbeon.com/)
+	%section.footer_address
 		%address
 			:markdown
 				[National&nbsp;e-Science&nbsp;Centre (NeSC)](http://www.nesc.ac.uk)  
@@ -8,25 +24,11 @@
 				Edinburgh EH8 9AA, United Kingdom  
 				Tel: 0131 650 9822, fax: 0131 650 9819  
 				[library@nesc.ac.uk](mailto:library@nesc.ac.uk)
-		%section#footerCenter
-			%p
-				This is a beta site based on the 
-				%a{:href=>"http://www.toghq.com/"} tog platform.
-				It is currently best viewed with modern browsers such as 
-				%a{:href=>"http://www.google.com/chrome"} Chrome,
-				%a{:href=>"http://www.mozilla.com/firefox/"} Firefox
-				and
-				%a{:href=>"http://www.apple.com/safari/"} Safari.
-				Work is underway for other browsers compliance, full comment and blog facilities.
-			%p	
+		
+		/
+			%section#footerLeft
+				%h3 Project Info and Documents
 				:markdown
-					The site will feature the [digital library](http://library.nesc.ed.ac.uk)
-					to be enhanced under this project. The library is based on a range of open source systems: 
-					[Fedora](http://www.fedora-commons.org/),	[Blacklight](http://blacklight.rubyforge.org/),
-					[Solr](http://lucene.apache.org/solr/) &amp; [Orbeon Forms](http://www.orbeon.com/)
-		%section#footerLeft
-			%h3 Project Info and Documents
-			:markdown
-				* Short URL: [http://bit.ly/ux2web](http://bit.ly/ux2web)
-				* Project [Plan](http://library.nesc.ed.ac.uk/document/ux2projectplanweb1.pdf), [Work Packages](http://library.nesc.ed.ac.uk/document/ux2projectplanweb2.pdf)
-				* Report: [Usability Inspection of Digital Libraries](http://bit.ly/ux2inspectionreport)
+					* Short URL: [http://bit.ly/ux2web](http://bit.ly/ux2web)
+					* Project [Plan](http://library.nesc.ed.ac.uk/document/ux2projectplanweb1.pdf), [Work Packages](http://library.nesc.ed.ac.uk/document/ux2projectplanweb2.pdf)
+					* Report: [Usability Inspection of Digital Libraries](http://bit.ly/ux2inspectionreport)
