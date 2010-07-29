@@ -33,7 +33,7 @@
 					%br
 					Manager, Developer
 
-		- @boon_feed.entries[0..1].each do |entry|
+		- @boon_feed.entries[0..2].each do |entry|
 			%article
 				%header
 					%p
@@ -44,8 +44,7 @@
 						=entry.date_published.strftime("%d %B %Y, %I:%M%p")						
 				%section
 					:markdown
-						#{entry.description}
-					%a{:href=>entry.url} more
+						#{entry.description.to_s.split(/\s/)[0..48].join(' ')} [...] [more](#{entry.url})
 		%footer
 			%a{:href=>"http://boonious.typepad.com/ux2"} Other posts from this blog..
 		
@@ -70,9 +69,8 @@
 					%time{:datetime=>entry.date_published.strftime("%Y-%m-%dT%I:%M%:%SZ")}
 						=entry.date_published.strftime("%d %B %Y, %I:%M%p")
 				%section
-					%p
-						=entry.description
-						%a{:href=>entry.url} more
+					:markdown
+						#{entry.description} [more](#{entry.url})
 		%footer
 			%a{:href=>"http://lorrainepaterson.wordpress.com/"} Other posts from this blog..
 			
